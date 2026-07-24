@@ -26,9 +26,9 @@ RFIs, RFPs, solution documents, bid proposals, case studies
 
 | Sample | Type | Domain |
 |--------|------|--------|
-| [FirmwareGuard User Guide](samples/user-guide/) | End-User Documentation | IoT Security |
-| [API Reference](samples/api-docs/) | API Documentation | Fintech |
-| [Style Guide](samples/style-guide/) | Content Standards | Enterprise |
+| [FirmwareGuard User Guide](samples/user-guide/index.md) | End-User Documentation | IoT Security |
+| [API Reference](samples/api-docs/index.md) | API Documentation | Fintech |
+| [Style Guide](samples/style-guide/index.md) | Content Standards | Enterprise |
 
 ---
 

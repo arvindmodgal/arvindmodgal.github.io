@@ -49,7 +49,7 @@ theme:
     logo: material/file-document-edit
 
 extra_css:
-   - stylesheets/extra.css
+   - assets/css/extra.css
 
 extra:
   social:
