@@ -29,17 +29,12 @@ theme:
     text: Inter
     code: JetBrains Mono
   features:
-    - navigation.path          # Breadcrumbs in main content area
-    - navigation.sections
-    - navigation.top 
-    - navigation.instant
     - navigation.path
+    - navigation.sections
     - navigation.indexes
+    - navigation.instant
     - navigation.top
     - toc.follow
-    - search.suggest
-    - search.highlight
-    - content.code.copy          # Back-to-top button
     - search.suggest
     - search.highlight
     - content.tabs.link
