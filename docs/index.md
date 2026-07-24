@@ -8,16 +8,16 @@
 
 ## What I Do
 
-### :material-file-document-outline: User Documentation
++ ###📄 User Documentation
 User guides, installation & configuration manuals, release notes, context-sensitive online help
 
-### :material-api: API Documentation
+2. ### 🔌 API Documentation
 REST API references, OpenAPI specs, developer onboarding guides
 
-### :material-palette-swatch: UX Writing
++ ### 🎨 UX Writing
 UI microcopy, error messages, tooltips, screen flow guidance
 
-### :material-bullhorn: Proposals & Marketing
++ ### 📢 Proposals & Marketing
 RFIs, RFPs, solution documents, bid proposals, case studies
 
 ---
@@ -46,7 +46,7 @@ RFIs, RFPs, solution documents, bid proposals, case studies
 
 ## Contact
 
-- :material-email: arvind.modgal@outlook.com
-- :material-phone: +91 9902029693
-- :material-map-marker: Electronic City, Bangalore 560100
-- :fontawesome-brands-linkedin: [LinkedIn](https://www.linkedin.com/in/arvind-modgal-3705441ba)
+- 📧 arvind.modgal@outlook.com
+- 📱 +91 9902029693
+- 📍 Electronic City, Bangalore 560100
+- 💼 [LinkedIn](https://www.linkedin.com/in/arvind-modgal-3705441ba)

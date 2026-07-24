@@ -1,7 +1,13 @@
+---
 site_name: Arvind Modgal — Technical Writer
 site_url: https://arvindmodgal.github.io
-site_description: Senior Technical Writer with 15+ years in cybersecurity, fintech, and enterprise software documentation
+site_description: >
+  Senior Technical Writer with 15+ years in cybersecurity,
+  fintech, and enterprise software documentation
 site_author: Arvind Modgal
+
+# Fix directory URL issues
+use_directory_urls: false
 
 theme:
   name: material
@@ -24,7 +30,6 @@ theme:
     text: Inter
     code: JetBrains Mono
   features:
-    - navigation.sections
     - navigation.expand
     - navigation.top
     - search.suggest
@@ -67,12 +72,10 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 3
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tasklist:
       custom_checkbox: true
 
+# Flattened nav to avoid deep nesting issues
 nav:
   - Home: index.md
   - Resume: resume.md
@@ -80,9 +83,8 @@ nav:
       - Overview: samples/index.md
       - API documentation: samples/api-docs/index.md
       - Style guide: samples/style-guide/index.md
-      - FirmwareCheck user guide:
-          - Context: samples/user-guide/index.md
-          - Getting started: samples/user-guide/getting-started.md
-          - Managing devices: samples/user-guide/managing-devices.md
-          - Assessments: samples/user-guide/assessments.md
-          - Jira integration: samples/user-guide/jira-integration.md
+      - FirmwareCheck user guide: samples/user-guide/index.md
+      - Getting started: samples/user-guide/getting-started.md
+      - Managing devices: samples/user-guide/managing-devices.md
+      - Assessments: samples/user-guide/assessments.md
+      - Jira integration: samples/user-guide/jira-integration.md
