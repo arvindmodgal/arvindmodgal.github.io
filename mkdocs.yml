@@ -30,6 +30,7 @@ theme:
     text: Inter
     code: JetBrains Mono
   features:
+    - navigation.path          # ← BREADCRUMBS RESTORED
     - navigation.expand
     - navigation.top
     - search.suggest
@@ -75,7 +76,6 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
-# Flattened nav to avoid deep nesting issues
 nav:
   - Home: index.md
   - Resume: resume.md
