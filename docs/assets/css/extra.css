@@ -1,24 +1,4 @@
 /* ============================================
-   SIDEBAR MINI-BREADCRUMB (Above main nav)
-   ============================================ */
-
-/* Add a breadcrumb trail above the main navigation */
-.md-nav--primary > .md-nav__title {
-  display: none; /* Hide default title */
-}
-
-/* Custom breadcrumb styling for the sidebar */
-.md-sidebar__inner::before {
-  content: "";
-  display: block;
-  padding: 0.8rem 1.2rem;
-  margin: 0 0 0.5rem 0;
-  font-size: 0.75rem;
-  color: var(--md-default-fg-color--light);
-  border-bottom: 1px solid var(--md-default-fg-color--lightest);
-}
-
-/* ============================================
    SIDEBAR NAV ITEM ICONS
    ============================================ */
 
