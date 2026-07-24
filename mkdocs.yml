@@ -6,7 +6,6 @@ site_description: >
   fintech, and enterprise software documentation
 site_author: Arvind Modgal
 
-# Fix directory URL issues
 use_directory_urls: false
 
 theme:
@@ -30,9 +29,17 @@ theme:
     text: Inter
     code: JetBrains Mono
   features:
-    - navigation.path          # ← BREADCRUMBS RESTORED
-    - navigation.expand
+    - navigation.path          # Breadcrumbs in main content area
+    - navigation.sections
+    - navigation.top 
+    - navigation.instant
+    - navigation.path
+    - navigation.indexes
     - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy          # Back-to-top button
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -42,7 +49,7 @@ theme:
     logo: material/file-document-edit
 
 extra_css:
-  - stylesheets/extra.css
+   - stylesheets/extra.css
 
 extra:
   social:
@@ -81,10 +88,13 @@ nav:
   - Resume: resume.md
   - Work samples:
       - Overview: samples/index.md
-      - API documentation: samples/api-docs/index.md
-      - Style guide: samples/style-guide/index.md
-      - FirmwareCheck user guide: samples/user-guide/index.md
-      - Getting started: samples/user-guide/getting-started.md
-      - Managing devices: samples/user-guide/managing-devices.md
-      - Assessments: samples/user-guide/assessments.md
-      - Jira integration: samples/user-guide/jira-integration.md
+      - API documentation:
+        - Overview: samples/api-docs/index.md
+      - Style guide:
+        - Overview: samples/style-guide/index.md
+      - FirmwareCheck user guide: 
+        - Overview: samples/user-guide/index.md
+        - Getting started: samples/user-guide/getting-started.md
+        - Managing devices: samples/user-guide/managing-devices.md
+        - Assessments: samples/user-guide/assessments.md
+        - Jira integration: samples/user-guide/jira-integration.md
