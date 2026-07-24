@@ -1,0 +1,89 @@
+site_name: Arvind Modgal — Technical Writer
+site_url: https://arvindmodgal.github.io
+site_description: Senior Technical Writer with 15+ years in cybersecurity, fintech, and enterprise software documentation
+site_author: Arvind Modgal
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.top
+    - navigation.path
+    - navigation.indexes
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    logo: material/file-document-edit
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/arvind-modgal-3705441ba
+    - icon: fontawesome/brands/github
+      link: https://github.com/arvindmodgal
+    - icon: fontawesome/solid/envelope
+      link: mailto:arvind.modgal@outlook.com
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: index.md
+  - Resume: resume.md
+  - Work samples:
+      - samples/index.md
+      - API documentation: samples/api-docs/index.md
+      - Style guide: samples/style-guide/index.md
+      - FirmwareCheck user guide:
+          - samples/user-guide/index.md
+          - Getting started: samples/user-guide/getting-started.md
+          - Managing devices: samples/user-guide/managing-devices.md
+          - Assessments: samples/user-guide/assessments.md
+          - Jira integration: samples/user-guide/jira-integration.md

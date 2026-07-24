@@ -1,0 +1,11 @@
+/* Box the right-hand "On this page" table of contents in a thin, rounded border */
+.md-sidebar--secondary .md-sidebar__scrollwrap {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.md-sidebar--secondary .md-nav__title {
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+}
