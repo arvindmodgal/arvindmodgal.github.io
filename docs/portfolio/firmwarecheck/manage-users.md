@@ -31,7 +31,7 @@ In this section, you'll learn how to:
 
 ## Before you begin
 
-- Sign in to FirmwareCheck.
+- Sign in to FirmwareCheck. For instructions, see [Sign in to FirmwareCheck](getting-started.md#how-to-sign-in).
 - Ensure that you have the **Administrator** role.
 
 !!! note
@@ -67,12 +67,76 @@ FirmwareCheck sends an invitation email to the specified email address.
 
 ## Change a user's role
 
+Change a user's role to grant or restrict access to FirmwareCheck features.
+
+### When to use this
+
+Use this procedure when a user's responsibilities change and they require additional or reduced permissions.
+
+### To change a user's role:
+
+1. 1. Sign in to your FirmwareCheck admin account.
+2. On the left-hand panel, click ![Users](images/users-icon.png)**Users**.
+3. From the table, select the user whose role you want to change.
+4. Click the ![More Options](images/moreoptions-icon.png) **More options** icon.
+5. Click **Edit user**.
+
+    ![Edit user dialog showing role and status fields for a user](images/change-user-role.png)
+
+    *Figure 3: Changing a user's role*
+
+6. On the **Edit user** dialog, select the new role.
+7. Click **Save**.
+
+
+FirmwareCheck immediately applies the updated permissions.
+
+!!! warning
+
+    Changing a user's role affects what they can access the next time they use FirmwareCheck.
+
+For more information about user roles, see **Invite a user**.
 
 ## Remove a user
 
+Remove a user who no longer requires access to the FirmwareCheck workspace.
+
+!!! note
+    Only users with **active** status can be removed.
+
+### When to use this
+
+Use this procedure when a user leaves your organization or no longer requires access to FirmwareCheck.
+
+### Before you begin
+
+- Sign in to FirmwareCheck. For instructions, see [How to sign in](getting-started.md#how-to-sign-in).
+- Ensure that you have the **Administrator** role.
+
+### Procedure
+
+1. Sign in to your FirmwareCheck admin account.
+2. On the left-hand panel, click **Users**.
+3. From the table, select the user you want to remove.
+4. Click the **More options** icon.
+
+    ![User table with the more-options menu open, showing edit user and remove access options](images/remove-user.png)
+
+    *Figure 4: Removing a user*
+
+5. Click **Remove access**.
+6. You'll see a warning that the user's account and access will be deleted.
+7. Click **Yes** to confirm.
+
 
 ## Next steps
-    Manage devices
+
+Now that you've managed user access, you can continue with one of the following tasks:
+
+- [Manage devices](manage-devices.md)
+- [Manage assessments](manage-assessments.md)
 
 ## Related tasks
-    Manage your account
+
+- [Manage your account](manage-your-account.md)
+- [Get access to FirmwareCheck](getting-started.md#get-access-to-firmwarecheck)
