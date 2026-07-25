@@ -1,6 +1,6 @@
 ---
-# icon: material/cog
-icon: material/account-edit
+icon: material/account-box-outline
+# icon: material/account-edit
 
 ---
 
