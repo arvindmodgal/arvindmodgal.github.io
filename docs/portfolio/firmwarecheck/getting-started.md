@@ -83,11 +83,59 @@ From here you can:
 
 
 ### Accept an invitation
+
+Use this procedure if a FirmwareCheck administrator has invited you to join an existing organization. 
+Your manager/colleagues with Binary Check access can invite you to use the application. They can nominate you either as a user or an administrator of an account.
+
+#### Before you begin
+
+- Ensure that you can access the invitation email sent by your administrator.
+- Complete the registration within the validity period specified in the invitation email.
+
+#### To accept an invitation
+
+1. Click the access link in the invitation email.
+
+    !!! note
+        The invitation link is valid for 24 hours.
+
+2. On the **New account set-up** page:
+      1. **Configure user** — enter your first name, last name, and company role, then click **Next**.
+      2. **Set password**, then click **Next**.
+      3. **Select industry**, then click **Finish**.
+
+Once your account is created, you'll be able to:
+
+- [Update your profile](#update-your-profile)
+- [Change your display name](#change-your-display-name)
+- [Change the industry on your profile](#change-the-associated-industry-on-your-profile)
+- [Invite a new user](#manage-users)
+
+!!! tip
+
+    If the invitation link has expired, contact your organization's FirmwareCheck administrator and request a new invitation.
 ---
 
-## How to sign in
+## Sign in to FirmwareCheck
 
-How users authenticate after receiving access.
+    Use this procedure to sign in to FirmwareCheck after your account has been created.
+
+#### To sign in
+
+1. Open the FirmwareCheck sign-in page.
+
+2. Type your email address.
+
+3. Type your password.
+
+4. Click **Sign In**.
+
+The FirmwareCheck dashboard opens.
+
+!!! note
+
+    If you've forgotten your password, see
+    **Reset your password**.
 
 ---
 
