@@ -90,7 +90,7 @@ nav:
           - Manage Your Account: portfolio/firmwarecheck/manage-your-account.md
           - Manage Users: portfolio/firmwarecheck/manage-users.md
           # - Manage Devices: portfolio/firmwarecheck/manage-devices.md
-          - Manage devices:
+          - 💻 Manage devices:
               - Overview: portfolio/firmwarecheck/manage-devices/index.md
               - What is a device?: portfolio/firmwarecheck/manage-devices/what-is-a-device.md
               - Device status: portfolio/firmwarecheck/manage-devices/device-status.md
