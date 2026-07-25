@@ -117,8 +117,12 @@ Once your account is created, you'll be able to:
 ---
 
 ## Sign in to FirmwareCheck
+Use this procedure to sign in to FirmwareCheck after your account has been created.
 
-    Use this procedure to sign in to FirmwareCheck after your account has been created.
+#### Before you begin
+
+- Ensure that your account has been activated.
+- Have your registered email address and password available.
 
 #### To sign in
 
@@ -141,9 +145,20 @@ The FirmwareCheck dashboard opens.
 
 ## Reset your password
 
-How users reset a forgotten password or change an existing one.
+Use this procedure if you've forgotten your password and can't sign in to FirmwareCheck.
+#### To reset your password
+1. Go to the FirmwareCheck sign-in page.
+2. Click **Forgot your password?**
+3. On the **Forgot password** dialog, enter your email.
+4. Click **Reset password**.
 
-### Recover a forgotten password
+    You'll get an email with a password recovery link. Click it to open the **Password reset** page.
+
+    !!! note
+        The recovery link is valid for 24 hours. If it doesn't show up in your inbox, check your spam or junk folder.
+
+5. On the **Password reset** page, enter your new password and click **Finish**.
+
 ---
 
 ## Understand the dashboard
