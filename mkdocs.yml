@@ -89,7 +89,16 @@ nav:
           - Getting Started: portfolio/firmwarecheck/getting-started.md
           - Manage Your Account: portfolio/firmwarecheck/manage-your-account.md
           - Manage Users: portfolio/firmwarecheck/manage-users.md
-          - Manage Devices: portfolio/firmwarecheck/manage-devices.md
+          # - Manage Devices: portfolio/firmwarecheck/manage-devices.md
+          - Manage devices:
+              - Overview: portfolio/firmwarecheck/manage-devices/index.md
+              - What is a device?: portfolio/firmwarecheck/manage-devices/what-is-a-device.md
+              - Device status: portfolio/firmwarecheck/manage-devices/device-status.md
+              - Create a device: portfolio/firmwarecheck/manage-devices/create-a-device.md
+              - Find a device: portfolio/firmwarecheck/manage-devices/find-a-device.md
+              - Update device information: portfolio/firmwarecheck/manage-devices/update-device-information.md
+              - Archive a device: portfolio/firmwarecheck/manage-devices/archive-a-device.md
+              - Delete a device: portfolio/firmwarecheck/manage-devices/delete-a-device.md
           - Manage Assessments: portfolio/firmwarecheck/manage-assessments.md
           - Jira Integration: portfolio/firmwarecheck/jira-integration.md
           - Reports: portfolio/firmwarecheck/reports.md
