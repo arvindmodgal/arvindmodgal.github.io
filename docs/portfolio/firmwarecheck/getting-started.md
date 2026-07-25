@@ -18,21 +18,69 @@ icon: material/rocket-launch-outline
 
 ## Overview
 
-Getting Started helps first-time users gain access to FirmwareCheck, sign in, and become familiar with the application. After completing the tasks in this section, you'll be ready to create your first device and begin working with firmware assessments.
+This section helps first-time users gain access to FirmwareCheck, sign in, and become familiar with the application.
+
+Whether you're creating a new account or accepting an invitation from your organization, the topics in this section guide you through the steps required to access FirmwareCheck and prepare for your first firmware assessment.
+
+After completing this section, you'll be ready to manage your account, create a device, upload firmware, and run an assessment.
 
 ---
 
 ## Get access to FirmwareCheck
 
-Choose the option that matches your situation.
+There are two ways to gain access to FirmwareCheck. Choose the option that matches your situation.
 
 | If you... | Go to |
-|-----------|--------|
-| Don't have an account | Register a new account |
-| Received an invitation | Accept an invitation |
-| Need access for a colleague | Ask your administrator or see **Manage Users** |
+|------------|-------|
+| Don't have a FirmwareCheck account | Register a new account |
+| Received an invitation from your organization | Accept an invitation |
 
 ### Register a new account
+
+Use this procedure to create a new FirmwareCheck account if your organization allows self-registration.
+
+#### Before you begin
+
+- Use a valid business email address.
+- Ensure that you can access the confirmation email sent during registration.
+
+#### To register a new account
+
+If this is your first time using FirmwareCheck, you'll register yourself and create a username and password.
+
+**To register and sign in for the first time:**
+
+1. Go to the FirmwareCheck sign-in page (`https://app.firmwarecheck.io/signup`).
+2. Click **Register**.
+3. On the **FirmwareCheck — Registration** dialog, enter your business email and company name.
+4. Click **Submit**.
+
+    You'll receive an email from FirmwareCheck with a link to complete registration.
+
+    !!! note
+        The confirmation link is valid for 24 hours. If it doesn't show up in your inbox, check your spam or junk folder.
+
+    ![FirmwareCheck registration form showing the business email and company name fields, plus the confirmation screen after submitting](images/registration-form.png)
+    *Figure 1: Signing in to FirmwareCheck for the first time*
+
+5. Open the confirmation email and click the link inside it. This opens the registration window in your browser.
+6. On the **New account set-up** page:
+      1. **Configure user** — enter your first name, last name, and company role, then click **Next**.
+      2. **Set password**, then click **Next**.
+      3. **Select industry**, then click **Finish**.
+
+    ![FirmwareCheck new account set-up flow, showing the configure user, set password, and select industry steps](images/account-setup.png)
+    *Figure 2: Completing the registration process*
+
+Once your account is created, you'll move to the next step, where you can [invite other users](#manage-users) — colleagues or teammates. You can skip this and come back to it later.
+
+From here you can:
+
+- [Update your profile](#update-your-profile)
+- [Change your display name](#change-your-display-name)
+- [Change the industry on your profile](#change-the-associated-industry-on-your-profile)
+- [Invite a new user](#manage-users)
+
 
 ### Accept an invitation
 ---
