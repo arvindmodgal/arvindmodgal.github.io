@@ -163,15 +163,49 @@ Use this procedure if you've forgotten your password and can't sign in to Firmwa
 
 ## Understand the dashboard
 
-Explain the purpose of the dashboard and the main navigation areas.
+After you sign in, the FirmwareCheck dashboard opens. The dashboard provides access to device management, firmware assessments, user administration, integrations, and account settings.
 
----
+The interface is organized into several areas that remain consistent throughout the application.
+![Dashboard](images/dashboard-overview.png)
+*Figure 1. FirmwareCheck dashboard.*
+
+### Main navigation
+
+Use the navigation pane on the left to access the main areas of FirmwareCheck.
+
+| Menu | Purpose |
+|------ | --------|
+| Home | View dashboard information, recent activity, and assessment summaries. |
+|FirmwareCheck | Create and manage devices, firmware, and run assessments. |
+| Users | Invite users and manage roles (administrators only). |
+| Integrations | Configure third-party integrations such as Jira. |
+
+### Workspace
+
+The workspace displays the page you're currently working on.
+
+As you navigate through FirmwareCheck, the workspace updates to show the selected feature, such as devices, assessments, or reports.
+
+### Notifications and user menu
+
+The upper-right corner of the dashboard provides access to notifications and your user account.
+
+From the user menu, you can:
+
+- Update your profile.
+- Change your password.
+- Sign out.
 
 ## Next steps
 
-After signing in, you're ready to:
+Now that you're familiar with the FirmwareCheck interface, you're ready to begin working with devices.
 
-- Manage your account
-- Create your first device
-- Upload firmware
-- Run your first assessment
+Continue with one of the following tasks:
+
+- [Manage your account](manage-your-account.md)
+- [Manage devices](manage-devices.md)
+
+## Related tasks
+
+- [Reset your password](getting-started.md#reset-your-password)
+- [Manage users](manage-users.md)

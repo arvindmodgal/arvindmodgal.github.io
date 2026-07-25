@@ -87,7 +87,7 @@ nav:
       - FirmwareCheck User Guide:
           - Overview: portfolio/firmwarecheck/index.md
           - Getting Started: portfolio/firmwarecheck/getting-started.md
-          - Manage Account: portfolio/firmwarecheck/manage-account.md
+          - Manage Your Account: portfolio/firmwarecheck/manage-your-account.md
           - Manage Users: portfolio/firmwarecheck/manage-users.md
           - Manage Devices: portfolio/firmwarecheck/manage-devices.md
           - Manage Assessments: portfolio/firmwarecheck/manage-assessments.md
