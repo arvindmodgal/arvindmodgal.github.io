@@ -10,6 +10,7 @@ use_directory_urls: false
 
 theme:
   name: material
+  # custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -43,8 +44,8 @@ theme:
   icon:
     logo: material/file-document-edit
 
-extra_css:
-   - assets/css/extra.css
+# extra_css:
+#    - assets/css/extra.css
 
 extra:
   social:
