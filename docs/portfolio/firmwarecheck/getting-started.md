@@ -166,7 +166,7 @@ Use this procedure if you've forgotten your password and can't sign in to Firmwa
 After you sign in, the FirmwareCheck dashboard opens. The dashboard provides access to device management, firmware assessments, user administration, integrations, and account settings.
 
 The interface is organized into several areas that remain consistent throughout the application.
-![Dashboard](images/dashboard-overview.png)
+![alt text](images/Dashboard.png)
 *Figure 1. FirmwareCheck dashboard.*
 
 ### Main navigation
