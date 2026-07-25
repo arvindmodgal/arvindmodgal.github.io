@@ -14,17 +14,17 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
+      primary: indigo
       accent: deep orange
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
+      primary: indigo
       accent: amber
       toggle:
-        icon: material/brightness-4
+        icon: material/brightness-7
         name: Switch to light mode
   font:
     text: Inter
@@ -82,15 +82,20 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Resume: resume.md
-  - Work samples:
-      - Overview: samples/index.md
-      - API documentation:
-        - Overview: samples/api-docs/index.md
-      - Style guide:
-        - Overview: samples/style-guide/index.md
-      - FirmwareCheck user guide: 
-        - Overview: samples/user-guide/index.md
-        - Getting started: samples/user-guide/getting-started.md
-        - Managing devices: samples/user-guide/managing-devices.md
-        - Assessments: samples/user-guide/assessments.md
-        - Jira integration: samples/user-guide/jira-integration.md
+  - Portfolio:
+      - Overview: portfolio/index.md
+      - FirmwareCheck User Guide:
+          - Overview: portfolio/firmwarecheck/index.md
+          - Getting Started: portfolio/firmwarecheck/getting-started.md
+          - Manage Account: portfolio/firmwarecheck/manage-account.md
+          - Manage Users: portfolio/firmwarecheck/manage-users.md
+          - Manage Devices: portfolio/firmwarecheck/manage-devices.md
+          - Manage Assessments: portfolio/firmwarecheck/manage-assessments.md
+          - Jira Integration: portfolio/firmwarecheck/jira-integration.md
+          - Reports: portfolio/firmwarecheck/reports.md
+          - Troubleshooting: portfolio/firmwarecheck/troubleshooting.md
+          - FAQ: portfolio/firmwarecheck/faq.md
+      - REST API Documentation:
+          - Overview: portfolio/api/index.md
+      - Style Guide:
+          - Overview: portfolio/style-guide/index.md
