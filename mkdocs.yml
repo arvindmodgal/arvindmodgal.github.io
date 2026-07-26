@@ -10,27 +10,28 @@ use_directory_urls: false
 
 theme:
   name: material
+  # custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
+      primary: indigo
       accent: deep orange
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
+      primary: indigo
       accent: amber
       toggle:
-        icon: material/brightness-4
+        icon: material/brightness-7
         name: Switch to light mode
   font:
     text: Inter
     code: JetBrains Mono
   features:
     - navigation.path
-    - navigation.sections
+    # - navigation.sections
     - navigation.indexes
     - navigation.instant
     - navigation.top
@@ -43,8 +44,8 @@ theme:
   icon:
     logo: material/file-document-edit
 
-extra_css:
-   - assets/css/extra.css
+# extra_css:
+#    - assets/css/extra.css
 
 extra:
   social:
@@ -81,15 +82,52 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Resume: resume.md
-  - Work samples:
-      - Overview: samples/index.md
-      - API documentation:
-        - Overview: samples/api-docs/index.md
-      - Style guide:
-        - Overview: samples/style-guide/index.md
-      - FirmwareCheck user guide: 
-        - Overview: samples/user-guide/index.md
-        - Getting started: samples/user-guide/getting-started.md
-        - Managing devices: samples/user-guide/managing-devices.md
-        - Assessments: samples/user-guide/assessments.md
-        - Jira integration: samples/user-guide/jira-integration.md
+  - Portfolio:
+      - Overview: portfolio/index.md
+      - FirmwareCheck User Guide:
+          - Overview: portfolio/firmwarecheck/index.md
+          - Getting Started: portfolio/firmwarecheck/getting-started.md
+          - Manage Your Account: portfolio/firmwarecheck/manage-your-account.md
+          - Manage Users: portfolio/firmwarecheck/manage-users.md
+          # - Manage Devices: portfolio/firmwarecheck/manage-devices.md
+          - Manage devices:
+              - Overview: portfolio/firmwarecheck/manage-devices/index.md
+              - What is a device?: portfolio/firmwarecheck/manage-devices/what-is-a-device.md
+              - Device status: portfolio/firmwarecheck/manage-devices/device-status.md
+              - Create a device: portfolio/firmwarecheck/manage-devices/create-a-device.md
+              - Find a device: portfolio/firmwarecheck/manage-devices/find-a-device.md
+              - Update device information: portfolio/firmwarecheck/manage-devices/update-device-information.md
+              - Archive a device: portfolio/firmwarecheck/manage-devices/archive-a-device.md
+              - Delete a device: portfolio/firmwarecheck/manage-devices/delete-a-device.md
+          # - Manage Assessments: portfolio/firmwarecheck/manage-assessments.md
+          - Manage firmware:
+              - Overview: portfolio/firmwarecheck/manage-firmware/index.md
+              - What is firmware?: portfolio/firmwarecheck/manage-firmware/what-is-firmware.md
+              - Upload firmware: portfolio/firmwarecheck/manage-firmware/upload-firmware.md
+              - Replace firmware: portfolio/firmwarecheck/manage-firmware/replace-firmware.md
+          - Run assessments:
+              - Overview: portfolio/firmwarecheck/run-assessments/index.md
+              - Assessment types: portfolio/firmwarecheck/run-assessments/assessment-types.md
+              - Run an assessment: portfolio/firmwarecheck/run-assessments/run-an-assessment.md
+              - View assessment results: portfolio/firmwarecheck/run-assessments/view-assessment-results.md
+          # - Jira Integration: portfolio/firmwarecheck/jira-integration.md
+          - Jira integration:
+              - Overview: portfolio/firmwarecheck/jira-integration/index.md
+              - Connect Jira: portfolio/firmwarecheck/jira-integration/connect-jira.md
+              - Create a Jira issue: portfolio/firmwarecheck/jira-integration/create-jira-issue.md
+          #- Reports: portfolio/firmwarecheck/reports.md
+          - Troubleshooting: portfolio/firmwarecheck/troubleshooting.md
+          - FAQ: portfolio/firmwarecheck/faq.md
+      - REST API Documentation:
+          - Overview: portfolio/api/index.md
+      - Style Guide:
+          - Overview: portfolio/style-guide/index.md
+          - Writing Principles: portfolio/style-guide/writing-principles.md
+          - Voice and Tone: portfolio/style-guide/voice-and-tone.md
+          - Common Writing Issues: portfolio/style-guide/common-mistakes.md  
+          - Terminology: portfolio/style-guide/terminology.md 
+          - Procedures: portfolio/style-guide/procedures.md 
+          - Formatting: portfolio/style-guide/formatting.md 
+          - Accessibility: portfolio/style-guide/accessibility.md
+          - Docs as Code: portfolio/style-guide/docs-as-code.md 
+          - Editorial Checklist: portfolio/style-guide/editorial-checklist.md 
