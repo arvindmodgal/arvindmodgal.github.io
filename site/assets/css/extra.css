@@ -1,0 +1,114 @@
+/* ============================================
+   SIDEBAR NAV ITEM ICONS
+   ============================================ */
+
+/* Add icons to top-level nav items using CSS */
+.md-nav__link[href="index.md"]::before,
+.md-nav__link[href="./index.md"]::before,
+.md-nav__link[href="../index.md"]::before {
+  content: "🏠 ";
+  margin-right: 0.3rem;
+}
+
+.md-nav__link[href="resume.md"]::before,
+.md-nav__link[href="./resume.md"]::before {
+  content: "👤 ";
+  margin-right: 0.3rem;
+}
+
+/* Work samples folder icon */
+.md-nav__item--nested > .md-nav__link::before {
+  content: "📁 ";
+  margin-right: 0.3rem;
+}
+
+/* ============================================
+   ACTIVE PAGE HIGHLIGHTING
+   ============================================ */
+
+/* Highlight active nav item like in your screenshot */
+.md-nav__link--active {
+  background-color: var(--md-primary-fg-color--transparent, rgba(0, 128, 128, 0.1));
+  color: var(--md-primary-fg-color);
+  border-radius: 0 1rem 1rem 0;
+  font-weight: 600;
+}
+
+/* Active indicator dot */
+.md-nav__link--active::after {
+  content: "";
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--md-primary-fg-color);
+  border-radius: 50%;
+}
+
+/* ============================================
+   SIDEBAR STYLING
+   ============================================ */
+
+/* Cleaner sidebar appearance */
+.md-sidebar {
+  font-size: 0.85rem;
+}
+
+.md-nav__link {
+  padding: 0.4rem 0.8rem;
+  margin: 0.1rem 0;
+  border-radius: 0 1rem 1rem 0;
+  transition: background-color 0.2s;
+}
+
+.md-nav__link:hover {
+  background-color: var(--md-default-fg-color--lightest);
+}
+
+/* Nested items indentation */
+.md-nav__item .md-nav__item .md-nav__link {
+  padding-left: 1.5rem;
+}
+
+/* ============================================
+   BREADCRUMB IN MAIN CONTENT
+   ============================================ */
+
+/* Style the main content breadcrumb */
+.md-path {
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-path__item {
+  color: var(--md-primary-fg-color);
+}
+
+.md-path__item--active {
+  color: var(--md-default-fg-color);
+  font-weight: 500;
+}
+
+/* ============================================
+   HEADER SOCIAL ICONS
+   ============================================ */
+
+/* Style header social icons */
+.md-header__option .md-social {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.md-social__link {
+  color: var(--md-header-fg-color);
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.md-social__link:hover {
+  opacity: 1;
+}
