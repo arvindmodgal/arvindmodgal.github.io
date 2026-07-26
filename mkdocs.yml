@@ -122,3 +122,12 @@ nav:
           - Overview: portfolio/api/index.md
       - Style Guide:
           - Overview: portfolio/style-guide/index.md
+          - Writing Principles: portfolio/style-guide/writing-principles.md
+          - Voice and Tone: portfolio/style-guide/voice-and-tone.md
+          - Common Writing Issues: portfolio/style-guide/common-mistakes.md  
+          - Terminology: portfolio/style-guide/terminology.md 
+          - Procedures: portfolio/style-guide/procedures.md 
+          - Formatting: portfolio/style-guide/formatting.md 
+          - Accessibility: portfolio/style-guide/accessibility.md
+          - Docs as Code: portfolio/style-guide/docs-as-code.md 
+          - Editorial Checklist: portfolio/style-guide/editorial-checklist.md 

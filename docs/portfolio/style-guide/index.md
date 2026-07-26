@@ -1,6 +1,4 @@
----
-icon: material/book-edit
----
+
 
 # Documentation Style Guide
 
