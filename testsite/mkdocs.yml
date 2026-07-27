@@ -1,0 +1,51 @@
+site_name: Test Site
+
+theme:
+  name: material
+  features:
+    - navigation.expand
+
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: deep orange
+    - toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+    - toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+        
+  features:
+    - navigation.path
+    - navigation.indexes
+    - navigation.instant
+    - navigation.top
+    - toc.follow
+
+
+plugins:
+  - search
+extra_css:
+  - assets/css/extra.css
+nav:
+  - Home: index.md
+  - Navigation:
+      - Nav1: docs/navigation1/nav1.md
+  - Navigation 2:
+      - Nav2: docs/navigation2/nav2.md
+      
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg

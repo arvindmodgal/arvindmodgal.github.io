@@ -1,0 +1,97 @@
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+
+.hero {
+    background-image:
+        linear-gradient(
+            rgba(30, 40, 80, 0.75),
+            rgba(30, 40, 80, 0.75)
+        ),
+        url("../images/hero-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    padding: 5rem 3rem;
+    border-radius: 1rem;
+
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 750px;
+}
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+
+.hero {
+    background:
+        linear-gradient(
+            rgba(40, 50, 100, 0.85),
+            rgba(40, 50, 100, 0.85)
+        );
+
+    padding: 4rem 3rem;
+    border-radius: 1rem;
+
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero h2 {
+    font-weight: 400;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+}
+/* Card grid fix */
+
+.grid.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.grid.cards > ul {
+    display: contents;
+}
+
+.grid.cards li {
+    list-style: none;
+}
+
+
+/* Responsive layout */
+
+@media screen and (max-width: 900px) {
+    .grid.cards {
+        grid-template-columns: 1fr;
+    }
+}
+.grid.cards > ul > li {
+    display: flex;
+    flex-direction: column;
+}
+.grid.cards > ul > li {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid.cards > ul > li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
