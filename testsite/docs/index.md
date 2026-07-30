@@ -1,3 +1,57 @@
+---
+template: home.html
+title: Home
+hide:
+  - navigation
+  - toc
+---
+
+<!--
+This file intentionally contains no content.
+
+The homepage is rendered by:
+
+overrides/home.html
+
+All styling is in:
+
+docs/assets/css/landing.css
+
+All interactions are in:
+
+docs/assets/js/landing.js
+-->
+
+
+<!-- ---
+template: home.html
+---
+
+
+
+
+Keep at least one blank newline here. This Markdown file can remain empty 
+because your overrides/home.html template handles all the visual rendering.
+
+
+
+<!-- ---
+hide:
+  - navigation
+  - toc
+--- -->
+
+<div class="hero-container" markdown="1">
+  <div class="hero-content">
+    <h1>Welcome to My Documentation Site</h1>
+    <p>The ultimate hub for guides, API references, and developer tools.</p>
+    <a href="getting-started/" class="hero-btn">Get Started</a>
+    <a href="https://github.com" class="hero-btn hero-btn-secondary">GitHub</a>
+  </div>
+</div>
+
+## Our Key Features
+This is where the regular page content resumes. You can use standard Markdown grids or text sections here.
 <div class="hero" markdown>
 
 # Arvind Modgal
@@ -9,7 +63,7 @@ for cybersecurity, fintech, and enterprise software products.
 
 [View Portfolio](portfolio/index.md){ .md-button .md-button--primary }
 
-[Download Resume](resume.md){ .md-button }
+[Download Resume :fontawesome-solid-download:](resume.md){ .md-button }
 
 </div>
 
@@ -164,4 +218,4 @@ My approach combines:
 | Design & Media | Figma, PowerPoint, Snagit |
 
 
-
+ -->

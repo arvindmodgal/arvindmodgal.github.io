@@ -2,8 +2,30 @@ site_name: Test Site
 
 theme:
   name: material
+  custom_dir: overrides
+
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
   features:
     - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.instant
+    - navigation.top
+    - toc.follow
 
   palette:
     - scheme: default
@@ -29,14 +51,22 @@ theme:
 
 plugins:
   - search
+
 extra_css:
   - assets/css/extra.css
+  - assets/css/landing.css
+
+custom_dir: overrides
+
 nav:
-  - Home: index.md
-  - Navigation:
-      - Nav1: docs/navigation1/nav1.md
-  - Navigation 2:
-      - Nav2: docs/navigation2/nav2.md
+    - Home: index.md
+    - Resume: resume.md
+    - Portfolio:
+      - Overview: portfolio/firmwarecheck/index.md
+      - Overview: portfolio/firmwarecheck/index.md
+      - Documentation Approach: portfolio/firmwarecheck/documentation-approach.md
+      - Getting Started: portfolio/firmwarecheck/getting-started.md
+      
       
 markdown_extensions:
   - admonition
