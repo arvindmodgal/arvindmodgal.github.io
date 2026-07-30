@@ -1,5 +1,7 @@
 ---
-icon: material/alphabetical
+
+icon: material/minus-box-outline
+
 ---
 
 # Terminology

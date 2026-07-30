@@ -45,7 +45,7 @@ theme:
     logo: material/file-document-edit
 
 # extra_css:
-#    - assets/css/extra.css
+#   - assets/css/extra.css
 
 extra:
   social:
@@ -84,8 +84,10 @@ nav:
   - Resume: resume.md
   - Portfolio:
       - Overview: portfolio/index.md
-      - FirmwareCheck User Guide:
+      - FirmwareCheck Documentation Project:
           - Overview: portfolio/firmwarecheck/index.md
+          - Documentation Approach: portfolio/firmwarecheck/documentation-approach.md
+          - About FirmwareCheck: portfolio/firmwarecheck/about-firmwarecheck.md 
           - Getting Started: portfolio/firmwarecheck/getting-started.md
           - Manage Your Account: portfolio/firmwarecheck/manage-your-account.md
           - Manage Users: portfolio/firmwarecheck/manage-users.md

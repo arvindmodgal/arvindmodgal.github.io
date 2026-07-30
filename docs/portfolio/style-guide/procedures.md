@@ -3,6 +3,7 @@
 icon: material/invoice-text-edit-outline
 
 ---
+
 # Writing procedures
 
 Procedures help users complete a task. Every procedure should focus on a single user goal and provide clear, sequential instructions.

@@ -12,6 +12,14 @@ FirmwareCheck uses a device record to organize all information related to that p
 
 A single device can contain multiple firmware versions, allowing you to compare assessment results over time and track the security posture of a product throughout its lifecycle.
 
+A device also stores several component attributes:
+
+- Software configuration
+- SBOM — software packages and licensing
+- Credentials
+- Application configurations, such as web servers
+
+
 ## Device information
 
 A device record typically includes:

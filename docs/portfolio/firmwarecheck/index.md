@@ -1,49 +1,113 @@
-# FirmwareCheck User Guide
+# FirmwareCheck Documentation Project
 
-This guide focuses on using FirmwareCheck after deployment. It does not cover installation, system administration, or security best practices unrelated to the application.
+<div class="grid cards" markdown>
+
+-   :material-shield-check: **Project Type**
+
+    ---
+
+    Cybersecurity SaaS documentation
+
+-   :material-account-edit: **My Role**
+
+    ---
+
+    Senior Technical Writer
+
+-   :material-file-document-multiple: **Deliverables**
+
+    ---
+
+    User guide, workflows, troubleshooting, FAQ, and style guide
+
+</div>
 
 ---
 
 ## Overview
 
-FirmwareCheck scans a firmware binary and tells you what's actually in it: the software components it contains, the known vulnerabilities those components carry, and vulnerabilities that have not yet been catalogued.
+FirmwareCheck is a cybersecurity platform that analyzes firmware binaries to identify software components, known vulnerabilities, and security risks.
 
-It also evaluates the firmware against the standards that apply to your product, including **ETSI TS 303 645** for consumer IoT devices and **ISO/SAE 21434** for automotive systems.
-
-The output is a report, not a black box. It includes a **Software Bill of Materials (SBOM)**, a list of **Common Vulnerabilities and Exposures (CVEs)**, and a compliance summary that can be shared with auditors, customers, or internal stakeholders.
-
-Product security and development teams typically use FirmwareCheck before a device ships, when identifying and fixing vulnerabilities is significantly less expensive.
-
-This guide explains how to use FirmwareCheck to manage devices, upload firmware, run assessments, review results, and integrate findings into your existing workflows.
+The platform helps organizations understand firmware security posture and generate reports for compliance, auditing, and risk management.
 
 ---
 
-## Who should use this guide?
+## Documentation Challenge
 
-This guide is intended for:
+The product involved complex cybersecurity concepts, including:
 
-- Security administrators
-- Firmware engineers
-- Product security teams
-- Compliance analysts
+- Firmware analysis
+- Software component identification
+- Vulnerability assessment
+- Security compliance reporting
 
-It assumes that you already have access to FirmwareCheck and are familiar with your organization's firmware security processes.
+The challenge was to create documentation that supported both technical users and security professionals without overwhelming users with unnecessary complexity.
 
 ---
 
-## Guide organization
+## Documentation Approach
 
-The guide is organized around the tasks that users perform most frequently.
+I applied a user-centered, task-based documentation approach.
 
-| Section | Description |
-|---------|-------------|
-| Getting Started | Access FirmwareCheck and become familiar with the application. |
-| Manage Account | Update your account settings and personal information. |
-| Manage Users | Invite users and manage roles and permissions. |
-| Manage Devices | Create, organize, archive, and manage devices. |
-| Manage Firmware | Upload firmware and manage firmware versions. |
-| Run Assessments | Perform vulnerability, policy, and zero-day assessments. |
-| Review Results | Analyze vulnerabilities, SBOMs, compliance findings, and reports. |
-| Integrations | Connect FirmwareCheck with Jira. |
-| Troubleshooting | Resolve common issues. |
-| FAQ | Find answers to frequently asked questions. |
+The documentation was organized around user goals:
+
+- Understand the platform
+- Manage devices
+- Upload firmware
+- Run security assessments
+- Analyze results
+- Resolve common issues
+
+---
+
+## Information Architecture
+
+The documentation structure was designed around user workflows:
+
+
+---
+
+## Key Documentation Samples
+
+<div class="grid cards" markdown>
+
+-   :material-book-open-page-variant: **User Guide**
+
+    ---
+
+    Task-based documentation helping users complete common workflows.
+
+    [:octicons-arrow-right-24: View guide](./)
+
+-   :material-account-cog: **User Workflows**
+
+    ---
+
+    Step-by-step procedures designed around user goals.
+
+-   :material-format-list-checks: **Style Guide**
+
+    ---
+
+    Documentation standards for consistency and scalability.
+
+</div>
+
+---
+
+## Tools and Workflow
+
+| Area | Tools |
+|---|---|
+| Authoring | Markdown, MkDocs Material |
+| Version Control | Git, GitHub |
+| Documentation Model | Topic-based authoring |
+| Content Approach | Task-oriented documentation |
+
+---
+
+## Outcome
+
+The documentation provides users with a structured path to understand the product, perform key workflows, and interpret security assessment results.
+
+The project demonstrates how complex cybersecurity concepts can be transformed into clear, actionable user documentation.
