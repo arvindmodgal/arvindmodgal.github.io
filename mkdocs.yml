@@ -5,12 +5,11 @@ site_description: >
   Senior Technical Writer with 15+ years in cybersecurity,
   fintech, and enterprise software documentation
 site_author: Arvind Modgal
-
 use_directory_urls: false
 
 theme:
   name: material
-  # custom_dir: overrides
+  custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -44,8 +43,9 @@ theme:
   icon:
     logo: material/file-document-edit
 
-# extra_css:
-#   - assets/css/extra.css
+extra_css:
+  #   - assets/css/extra.css
+  - assets/css/landing.css
 
 extra:
   social:
@@ -81,13 +81,13 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Resume: resume.md
+  - Resume: resume/index.md
   - Portfolio:
       - Overview: portfolio/index.md
       - FirmwareCheck Documentation Project:
           - Overview: portfolio/firmwarecheck/index.md
           - Documentation Approach: portfolio/firmwarecheck/documentation-approach.md
-          - About FirmwareCheck: portfolio/firmwarecheck/about-firmwarecheck.md 
+          - About FirmwareCheck: portfolio/firmwarecheck/about-firmwarecheck.md
           - Getting Started: portfolio/firmwarecheck/getting-started.md
           - Manage Your Account: portfolio/firmwarecheck/manage-your-account.md
           - Manage Users: portfolio/firmwarecheck/manage-users.md
@@ -126,10 +126,10 @@ nav:
           - Overview: portfolio/style-guide/index.md
           - Writing Principles: portfolio/style-guide/writing-principles.md
           - Voice and Tone: portfolio/style-guide/voice-and-tone.md
-          - Common Writing Issues: portfolio/style-guide/common-mistakes.md  
-          - Terminology: portfolio/style-guide/terminology.md 
-          - Procedures: portfolio/style-guide/procedures.md 
-          - Formatting: portfolio/style-guide/formatting.md 
+          - Common Writing Issues: portfolio/style-guide/common-mistakes.md
+          - Terminology: portfolio/style-guide/terminology.md
+          - Procedures: portfolio/style-guide/procedures.md
+          - Formatting: portfolio/style-guide/formatting.md
           - Accessibility: portfolio/style-guide/accessibility.md
-          - Docs as Code: portfolio/style-guide/docs-as-code.md 
-          - Editorial Checklist: portfolio/style-guide/editorial-checklist.md 
+          - Docs as Code: portfolio/style-guide/docs-as-code.md
+          - Editorial Checklist: portfolio/style-guide/editorial-checklist.md

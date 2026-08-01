@@ -22,7 +22,6 @@ All interactions are in:
 docs/assets/js/landing.js
 -->
 
-
 <!-- ---
 template: home.html
 ---
@@ -30,7 +29,7 @@ template: home.html
 
 
 
-Keep at least one blank newline here. This Markdown file can remain empty 
+Keep at least one blank newline here. This Markdown file can remain empty
 because your overrides/home.html template handles all the visual rendering.
 
 
@@ -41,7 +40,7 @@ hide:
   - toc
 --- -->
 
-<div class="hero-container" markdown="1">
+<!-- <div class="hero-container" markdown="1">
   <div class="hero-content">
     <h1>Welcome to My Documentation Site</h1>
     <p>The ultimate hub for guides, API references, and developer tools.</p>
@@ -205,17 +204,16 @@ My approach combines:
 
     Experience documenting cybersecurity, fintech, enterprise software, and complex technical products.
 
-</div>
-## Tools & Skills
+</div> -->
+<!-- ## Tools & Skills -->
 
-| Category | Tools |
-|---|---|
+<!-- | Category                | Tools                                     |
+| ----------------------- | ----------------------------------------- |
 | Documentation Platforms | MkDocs Material, Confluence, MadCap Flare |
-| Structured Authoring | DITA, XML, Oxygen XML Editor |
-| Developer Documentation | REST APIs, OpenAPI, Swagger |
-| Version Control | Git, GitHub |
-| Collaboration | Jira, Agile workflows |
-| Design & Media | Figma, PowerPoint, Snagit |
+| Structured Authoring    | DITA, XML, Oxygen XML Editor              |
+| Developer Documentation | REST APIs, OpenAPI, Swagger               |
+| Version Control         | Git, GitHub                               |
+| Collaboration           | Jira, Agile workflows                     |
+| Design & Media          | Figma, PowerPoint, Snagit                 |
 
-
- -->
+--> -->

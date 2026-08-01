@@ -56,7 +56,6 @@ extra_css:
   - assets/css/extra.css
   - assets/css/landing.css
 
-custom_dir: overrides
 
 nav:
     - Home: index.md

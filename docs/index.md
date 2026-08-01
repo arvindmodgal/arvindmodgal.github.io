@@ -1,3 +1,12 @@
+---
+template: home.html
+title: Home
+hide:
+  - navigation
+  - toc
+---
+
+<!--
 # Arvind Modgal
 
 **Senior Technical Writer | Cybersecurity · Fintech · Enterprise Software**
@@ -49,4 +58,4 @@ RFIs, RFPs, solution documents, bid proposals, case studies
 - 📧 arvind.modgal@outlook.com
 - 📱 +91 9902029693
 - 📍 Electronic City, Bangalore 560100
-- 💼 [LinkedIn](https://www.linkedin.com/in/arvind-modgal-3705441ba)
+- 💼 [LinkedIn](https://www.linkedin.com/in/arvind-modgal-3705441ba) -->
