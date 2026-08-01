@@ -4,6 +4,8 @@
 arvind.modgal@outlook.com · +91 9902029693 · Electronic City, Bangalore 560100  
 [LinkedIn](https://www.linkedin.com/in/arvind-modgal-3705441ba)
 
+[Download resume](/assets/resume.pdf){ target="\_blank" rel="noopener noreferrer" }
+
 ---
 
 ## Professional Summary
@@ -14,13 +16,13 @@ Senior Technical Writer with 15+ years of experience producing end-user document
 
 ## Core Skills
 
-| Category | Skills |
-|----------|--------|
-| **Documentation** | User guides, API docs, installation & configuration manuals, release notes, online help, video tutorials, style guides |
-| **UX & Proposals** | UI microcopy, error messages, tooltips, screen flow guidance, RFIs, RFPs, solution documents, bid proposals, case studies |
-| **Tools** | MkDocs, Markdown, Git, GitHub, Jira, Confluence, Adobe RoboHelp, MS Office Suite, Adobe Photoshop, SharePoint |
-| **Content Strategy** | Content reuse, template design, documentation planning, version control, localization coordination |
-| **Leadership** | Team management, mentoring, project scheduling, peer reviews, stakeholder communication |
+| Category             | Skills                                                                                                                    |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **Documentation**    | User guides, API docs, installation & configuration manuals, release notes, online help, video tutorials, style guides    |
+| **UX & Proposals**   | UI microcopy, error messages, tooltips, screen flow guidance, RFIs, RFPs, solution documents, bid proposals, case studies |
+| **Tools**            | MkDocs, Markdown, Git, GitHub, Jira, Confluence, Adobe RoboHelp, MS Office Suite, Adobe Photoshop, SharePoint             |
+| **Content Strategy** | Content reuse, template design, documentation planning, version control, localization coordination                        |
+| **Leadership**       | Team management, mentoring, project scheduling, peer reviews, stakeholder communication                                   |
 
 ---
 

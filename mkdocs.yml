@@ -32,7 +32,7 @@ theme:
     - navigation.path
     # - navigation.sections
     - navigation.indexes
-    - navigation.instant
+    # - navigation.instant
     - navigation.top
     - toc.follow
     - search.suggest
@@ -80,11 +80,11 @@ markdown_extensions:
       custom_checkbox: true
 
 nav:
-  - Home: index.md
+  - 🏠 Home: index.md
   - Resume: resume/index.md
   - Portfolio:
       - Overview: portfolio/index.md
-      - FirmwareCheck Documentation Project:
+      - FirmwareCheck User Guide:
           - Overview: portfolio/firmwarecheck/index.md
           - Documentation Approach: portfolio/firmwarecheck/documentation-approach.md
           - About FirmwareCheck: portfolio/firmwarecheck/about-firmwarecheck.md

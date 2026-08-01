@@ -1,26 +1,13 @@
 # FirmwareCheck Documentation Project
 
-<div class="grid cards" markdown>
+- **Project Type**
+  Cybersecurity SaaS documentation
 
--   :material-shield-check: **Project Type**
+- **My Role**
+  Senior Technical Writer
 
-    ---
-
-    Cybersecurity SaaS documentation
-
--   :material-account-edit: **My Role**
-
-    ---
-
-    Senior Technical Writer
-
--   :material-file-document-multiple: **Deliverables**
-
-    ---
-
-    User guide, workflows, troubleshooting, FAQ, and style guide
-
-</div>
+- **Deliverables**
+  User guide, workflows, troubleshooting, FAQ, and style guide
 
 ---
 
@@ -64,45 +51,26 @@ The documentation was organized around user goals:
 
 The documentation structure was designed around user workflows:
 
-
 ---
 
 ## Key Documentation Samples
 
-<div class="grid cards" markdown>
+- **User Guide**: Task-based documentation helping users complete common workflows.
 
--   :material-book-open-page-variant: **User Guide**
+- **User Workflows**: Step-by-step procedures designed around user goals.
 
-    ---
-
-    Task-based documentation helping users complete common workflows.
-
-    [:octicons-arrow-right-24: View guide](./)
-
--   :material-account-cog: **User Workflows**
-
-    ---
-
-    Step-by-step procedures designed around user goals.
-
--   :material-format-list-checks: **Style Guide**
-
-    ---
-
-    Documentation standards for consistency and scalability.
-
-</div>
+- **Style Guide**: Documentation standards for consistency and scalability.
 
 ---
 
 ## Tools and Workflow
 
-| Area | Tools |
-|---|---|
-| Authoring | Markdown, MkDocs Material |
-| Version Control | Git, GitHub |
-| Documentation Model | Topic-based authoring |
-| Content Approach | Task-oriented documentation |
+| Area                | Tools                       |
+| ------------------- | --------------------------- |
+| Authoring           | Markdown, MkDocs Material   |
+| Version Control     | Git, GitHub                 |
+| Documentation Model | Topic-based authoring       |
+| Content Approach    | Task-oriented documentation |
 
 ---
 
