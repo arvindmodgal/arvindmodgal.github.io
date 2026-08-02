@@ -1,7 +1,5 @@
 ---
-
 icon: material/minus-box-outline
-
 ---
 
 # Terminology
@@ -25,33 +23,34 @@ Follow these guidelines when choosing terminology:
 
 Use the following preferred terms in documentation.
 
-| Preferred | Avoid | Why |
-|-----------|-------|-----|
-| Click | Click on | Shorter and more direct |
-| Select | Choose | Use for UI controls |
-| Sign in | Log in, Login | Consistent product terminology |
-| Set up | Setup (verb) | Correct grammar |
-| Email | E-mail | Modern usage |
-| Use | Utilize | Plain language |
-| Start | Commence | Easier to understand |
-| End | Terminate | Plain language |
-| Remove | Delete (unless permanent) | More precise |
-| Device | Product, Hardware, Unit | Use one term consistently |
+<div class="voice-table" markdown="1">
 
----
+| Preferred | Avoid                     | Why                            |
+| --------- | ------------------------- | ------------------------------ |
+| Click     | Click on                  | Shorter and more direct        |
+| Select    | Choose                    | Use for UI controls            |
+| Sign in   | Log in, Login             | Consistent product terminology |
+| Set up    | Setup (verb)              | Correct grammar                |
+| Email     | E-mail                    | Modern usage                   |
+| Use       | Utilize                   | Plain language                 |
+| Start     | Commence                  | Easier to understand           |
+| End       | Terminate                 | Plain language                 |
+| Remove    | Delete (unless permanent) | More precise                   |
+| Device    | Product, Hardware, Unit   | Use one term consistently      |
+
+ </div>
 
 ## User interface terminology
 
 Use the exact labels that appear in the application.
 
-### Preferred
+<div class="voice-table" markdown="1">
 
-> Click **Create device**.
+| Preferred                | Avoid                 |
+| ------------------------ | --------------------- |
+| Click **Create device**. | Click **Add device**. |
 
-### Avoid
-
-> Click **Add device**.
-
+</div>
 If the button label changes in the application, update the documentation to match.
 
 ---
@@ -62,13 +61,14 @@ Define important product-specific terms early in the documentation.
 
 For example:
 
-| Term | Definition |
-|------|------------|
-| Device | The physical product being assessed. |
-| Firmware | Software installed on a device. |
+<div class="generic-table" markdown="1">
+| Term       | Definition                                                                 |
+| ---------- | -------------------------------------------------------------------------- |
+| Device     | The physical product being assessed.                                       |
+| Firmware   | Software installed on a device.                                            |
 | Assessment | Analysis performed on firmware to identify security and compliance issues. |
-| SBOM | A Software Bill of Materials generated during an assessment. |
-
+| SBOM       | A Software Bill of Materials generated during an assessment.               |
+</div>
 Avoid introducing multiple names for the same concept.
 
 ---
@@ -77,13 +77,10 @@ Avoid introducing multiple names for the same concept.
 
 Spell out a term the first time it appears, followed by the abbreviation if it will be used again.
 
-### Preferred
-
-> Software Bill of Materials (SBOM)
-
-Later references may use **SBOM** on its own.
-
-Avoid introducing abbreviations that are used only once.
+<div class="voice-table" markdown="1">
+| Preferred                                                                        | Avoid                                                    |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| Software Bill of Materials (SBOM). Later references may use **SBOM** on its own. | Avoid introducing abbreviations that are used only once. |
 
 ---
 

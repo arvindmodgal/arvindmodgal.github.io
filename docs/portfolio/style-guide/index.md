@@ -1,10 +1,12 @@
-
-
 # Documentation Style Guide
 
 The Documentation Style Guide defines the standards for creating clear, consistent, and user-focused technical documentation.
 
 It establishes writing conventions, formatting guidelines, terminology, and editorial practices to ensure documentation remains accurate, maintainable, and easy to use.
+
+---
+
+While tailored to meet specific organizational requirements, this guide is built on established technical writing standards, including the **Microsoft Writing Style Guide (formerly the Microsoft Manual of Style).**
 
 ## Who should use this guide?
 

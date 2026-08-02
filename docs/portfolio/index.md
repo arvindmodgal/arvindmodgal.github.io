@@ -1,4 +1,3 @@
-
 # Writing Samples
 
 Each sample includes context about the project, audience, tools used, and what I'd improve today.
@@ -15,29 +14,11 @@ Each sample includes context about the project, audience, tools used, and what I
 An anonymized user guide for an IoT security platform. Covers account setup, device management, security assessments, and Jira integration.
 
 **Highlights:**
+
 - Task-based procedures with numbered steps
 - Conditional branching (Policy vs. Vulnerability vs. Zero-Day assessments)
 - UI element formatting consistency (bold for buttons, monospace for code)
 - Embedded notes, tips, and warnings for critical actions
-
----
-
-## 🔌 [API Reference](api-docs/index.md)
-
-**Type:** API documentation  
-**Audience:** Developers integrating with security scanning APIs  
-**Domain:** REST API, OpenAPI 3.0, IoT security  
-**Tools:** OpenAPI, YAML, Swagger Editor, Markdown
-
-A complete OpenAPI 3.0 specification for firmware vulnerability scanning endpoints. Includes device management, binary uploads, and security assessment workflows.
-
-**Highlights:**
-- Full CRUD operations with request/response schemas
-- File upload endpoints with multipart/form-data
-- Asynchronous job processing patterns
-- Structured error responses with HTTP status codes
-- Bearer token authentication
-- Compliance standard references (MISRA, ISO 21434, ETSI 303 645)
 
 ---
 
@@ -51,6 +32,7 @@ A complete OpenAPI 3.0 specification for firmware vulnerability scanning endpoin
 An anonymized excerpt from a corporate style guide I established at a banking software company. Covers voice and tone, UI element formatting, capitalization, common errors, and procedure writing standards.
 
 **Highlights:**
+
 - Active voice and present tense enforcement
 - Comprehensive UI element formatting table (bold, italic, monospace rules)
 - Notes/Tips/Cautions/Warnings hierarchy with visual distinctions
@@ -61,15 +43,35 @@ An anonymized excerpt from a corporate style guide I established at a banking so
 
 ---
 
+## 🔌 [API Reference](api-docs/index.md)
+
+**Type:** API documentation  
+**Audience:** Developers integrating with security scanning APIs  
+**Domain:** REST API, OpenAPI 3.0, IoT security  
+**Tools:** OpenAPI, YAML, Swagger Editor, Markdown
+
+A complete OpenAPI 3.0 specification for firmware vulnerability scanning endpoints. Includes device management, binary uploads, and security assessment workflows.
+
+**Highlights:**
+
+- Full CRUD operations with request/response schemas
+- File upload endpoints with multipart/form-data
+- Asynchronous job processing patterns
+- Structured error responses with HTTP status codes
+- Bearer token authentication
+- Compliance standard references (MISRA, ISO 21434, ETSI 303 645)
+
+---
+
 ## Skills Demonstrated Across Samples
 
-| Skill | User Guide | API Docs | Style Guide |
-|-------|-----------|----------|-------------|
-| Task-based writing | ✅ | — | ✅ |
-| Structured authoring | ✅ | ✅ | ✅ |
-| Domain expertise (IoT/security) | ✅ | ✅ | — |
-| Domain expertise (banking/fintech) | — | — | ✅ |
-| API specification design | — | ✅ | — |
-| Information architecture | ✅ | ✅ | ✅ |
-| Content reuse & templates | — | — | ✅ |
-| Editorial standards | ✅ | ✅ | ✅ |
+| Skill                              | User Guide | API Docs | Style Guide |
+| ---------------------------------- | ---------- | -------- | ----------- |
+| Task-based writing                 | ✅         | —        | ✅          |
+| Structured authoring               | ✅         | ✅       | ✅          |
+| Domain expertise (IoT/security)    | ✅         | ✅       | —           |
+| Domain expertise (banking/fintech) | —          | —        | ✅          |
+| API specification design           | —          | ✅       | —           |
+| Information architecture           | ✅         | ✅       | ✅          |
+| Content reuse & templates          | —          | —        | ✅          |
+| Editorial standards                | ✅         | ✅       | ✅          |

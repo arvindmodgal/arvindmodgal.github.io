@@ -1,7 +1,5 @@
 ---
-
 icon: material/bullhorn-variant-outline
-
 ---
 
 # Voice and tone
@@ -12,17 +10,15 @@ Use a voice and tone that helps users complete tasks quickly and confidently. Do
 
 Use active voice whenever possible. Active voice clearly identifies who performs the action and makes instructions easier to follow.
 
-### Preferred
+<div class="voice-table" markdown="1">
 
-- Click **Save**.
-- Upload the firmware image.
-- Select **Run assessment**.
+| Preferred                  | Avoid                                  |
+| -------------------------- | -------------------------------------- |
+| Click **Save**.            | The **Save** button should be clicked. |
+| Upload the firmware image. | The firmware image must be uploaded.   |
+| Select **Run assessment**. | An assessment should be run.           |
 
-### Avoid
-
-- The **Save** button should be clicked.
-- The firmware image must be uploaded.
-- An assessment should be run.
+</div>
 
 ---
 
@@ -30,15 +26,14 @@ Use active voice whenever possible. Active voice clearly identifies who performs
 
 Write as if the product is performing the action now.
 
-### Preferred
+<div class="voice-table" markdown="1">
 
-- FirmwareCheck displays the assessment results.
-- The application sends a confirmation email.
+| Preferred                                      | Avoid                                                  |
+| ---------------------------------------------- | ------------------------------------------------------ |
+| FirmwareCheck displays the assessment results. | FirmwareCheck will display the assessment results.     |
+| The application sends a confirmation email.    | The application is going to send a confirmation email. |
 
-### Avoid
-
-- FirmwareCheck will display the assessment results.
-- The application is going to send a confirmation email.
+</div>
 
 ---
 
@@ -46,21 +41,17 @@ Write as if the product is performing the action now.
 
 Choose familiar words over technical or formal alternatives whenever possible.
 
-### Preferred
+<div class="voice-table" markdown="1">
 
-- Use
-- Start
-- Stop
-- Remove
-- Help
+| Preferred | Avoid      |
+| --------- | ---------- |
+| Use       | Utilize    |
+| Start     | Commence   |
+| Stop      | Terminate  |
+| Remove    | Eliminate  |
+| Help      | Facilitate |
 
-### Avoid
-
-- Utilize
-- Commence
-- Terminate
-- Eliminate
-- Facilitate
+</div>
 
 Use technical terms only when they are necessary and familiar to your audience.
 
@@ -70,13 +61,13 @@ Use technical terms only when they are necessary and familiar to your audience.
 
 Remove unnecessary words without changing the meaning.
 
-### Preferred
+<div class="voice-table" markdown="1">
 
-> Click **Create device**.
+| Preferred                | Avoid                                                                   |
+| ------------------------ | ----------------------------------------------------------------------- |
+| Click **Create device**. | In order to create a new device, click on the **Create device** button. |
 
-### Avoid
-
-> In order to create a new device, click on the **Create device** button.
+</div>
 
 Short, direct sentences improve readability and reduce translation costs.
 
@@ -101,13 +92,13 @@ Consistency reduces confusion and improves searchability.
 
 Speak directly to the reader using **you** when appropriate.
 
-### Preferred
+<div class="voice-table" markdown="1">
 
-> You can review the assessment results after the scan completes.
+| Preferred                                                       | Avoid                                                             |
+| --------------------------------------------------------------- | ----------------------------------------------------------------- |
+| You can review the assessment results after the scan completes. | Users can review the assessment results after the scan completes. |
 
-### Avoid
-
-> Users can review the assessment results after the scan completes.
+</div>
 
 Direct language makes documentation more engaging and easier to follow.
 
@@ -125,15 +116,13 @@ Avoid:
 - Opinions
 - Unnecessary enthusiasm
 
-### Preferred
+<div class="voice-table" markdown="1">
 
-> The assessment completed successfully.
+| Preferred                              | Avoid                                                |
+| -------------------------------------- | ---------------------------------------------------- |
+| The assessment completed successfully. | Great news! Your firmware passed with flying colors! |
 
-### Avoid
-
-> Great news! Your firmware passed with flying colors!
-
----
+</div>
 
 ## Documentation in practice
 

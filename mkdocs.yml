@@ -46,6 +46,8 @@ theme:
 extra_css:
   #   - assets/css/extra.css
   - assets/css/landing.css
+  - assets/css/newspaper.css
+  - assets/css/style-guide.css
 
 extra:
   social:
@@ -81,8 +83,9 @@ markdown_extensions:
 
 nav:
   - 🏠 Home: index.md
-  - Resume: resume/index.md
-  - Portfolio:
+  # - 📋 Resume: resume/index.md
+  - 📋 Resume: resume.md
+  - 📁 Portfolio:
       - Overview: portfolio/index.md
       - FirmwareCheck User Guide:
           - Overview: portfolio/firmwarecheck/index.md
@@ -121,7 +124,7 @@ nav:
           - Troubleshooting: portfolio/firmwarecheck/troubleshooting.md
           - FAQ: portfolio/firmwarecheck/faq.md
       - REST API Documentation:
-          - Overview: portfolio/api/index.md
+          - Overview: portfolio/api-docs/index.md
       - Style Guide:
           - Overview: portfolio/style-guide/index.md
           - Writing Principles: portfolio/style-guide/writing-principles.md
