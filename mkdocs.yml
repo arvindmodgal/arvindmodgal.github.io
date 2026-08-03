@@ -123,8 +123,8 @@ nav:
           #- Reports: portfolio/firmwarecheck/reports.md
           - Troubleshooting: portfolio/firmwarecheck/troubleshooting.md
           - FAQ: portfolio/firmwarecheck/faq.md
-      - REST API Documentation:
-          - Overview: portfolio/api-docs/index.md
+      - API Reference: api-reference.md
+          # - Overview: portfolio/api-docs/index.md
       - Style Guide:
           - Overview: portfolio/style-guide/index.md
           - Writing Principles: portfolio/style-guide/writing-principles.md
