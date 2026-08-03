@@ -1,7 +1,5 @@
 ---
-
 icon: material/script-text-play-outline
-
 ---
 
 # Formatting
@@ -12,18 +10,13 @@ Consistent formatting improves readability and helps users find information quic
 
 Headings should clearly describe the content that follows.
 
-### ✅ Preferred
-
-- Create a device
-- Upload firmware
-- Reset your password
-
-### ❌ Avoid
-
-- Device
-- Firmware
-- Passwords
-- Miscellaneous
+<div class="voice-table" markdown="1">
+| Preferred | Avoid |
+|-----|----|
+|Create a device| Device |
+|Upload firmware| Firmware  |
+|Reset your password| Miscellaneous|
+</div>
 
 Choose headings that reflect the user's goal rather than the product feature.
 
@@ -43,25 +36,14 @@ Use headings in a logical hierarchy.
 
 Avoid skipping heading levels.
 
-### ✅ Preferred
-
-```text
-# Create a device
-
-## Before you begin
-
-## Create a device
-
-### Optional settings
-```
-
-### ❌ Avoid
-
-```text
-# Create a device
-
-### Before you begin
-```
+<div class="voice-table" markdown="1">
+| Preferred | Avoid |
+|---|----|
+|# Create a device| # Create a device  |
+| ## Before you begin |  ### Before you begin  |
+| ## Create a device |   |
+| ### Optional settings |    |
+</div>
 
 ---
 
@@ -69,12 +51,13 @@ Avoid skipping heading levels.
 
 Use numbered lists when steps must be completed in order.
 
-### ✅ Preferred
-
-1. Click **Create device**.
-2. Enter the device name.
-3. Click **Save**.
-
+<div class="voice-table" markdown="1">
+|Preferred|  
+|---| 
+|1. Click **Create device**.|  
+|2. Enter the device name.|  
+|3. Click **Save**.|  
+</div>
 ---
 
 ## Use bullet lists for unordered information
@@ -103,13 +86,10 @@ Use **bold** for:
 
 ### Example
 
-Click **Save**.
-
-Select **Profile**.
-
-Open the **Settings** dialog.
-
-Enter the device name in the **Name** field.
+- Click **Save**.
+- Select **Profile**.
+- Open the **Settings** dialog.
+- Enter the device name in the **Name** field.
 
 ---
 
@@ -117,15 +97,13 @@ Enter the device name in the **Name** field.
 
 Link text should describe the destination.
 
-### ✅ Preferred
+<div class="voice-table" markdown="1">
 
-For more information, see
-[Upload firmware](manage-firmware/upload-firmware.md).
+| Preferred                                                                        | Avoid                                             |
+| -------------------------------------------------------------------------------- | ------------------------------------------------- |
+| For more information, see [Upload firmware](manage-firmware/upload-firmware.md). | Click [here](manage-firmware/upload-firmware.md). |
 
-### ❌ Avoid
-
-Click
-[here](manage-firmware/upload-firmware.md).
+</div>
 
 ---
 
@@ -135,15 +113,16 @@ Tables work best for comparing related information.
 
 ### Example
 
-| Assessment | Purpose |
-|------------|---------|
+<div class="generic-table" markdown="1">
+| Assessment    | Purpose                          |
+| ------------- | -------------------------------- |
 | Vulnerability | Identifies known vulnerabilities |
-| Policy | Checks compliance requirements |
-| Zero-day | Detects emerging threats |
+| Policy        | Checks compliance requirements   |
+| Zero-day      | Detects emerging threats         |
 
 Avoid using tables for long paragraphs of text.
 
----
+</div>
 
 ## Use images purposefully
 
@@ -164,16 +143,18 @@ Avoid screenshots that simply repeat the written instructions.
 
 Use callouts only when they add value.
 
-| Callout | Use for |
-|----------|----------|
-| 📝 Note | Additional information |
-| 💡 Tip | Best practices |
-| ⚠️ Warning | Potential risks |
+<div class="generic-table" markdown="1">
+
+| Callout      | Use for                             |
+| ------------ | ----------------------------------- |
+| 📝 Note      | Additional information              |
+| 💡 Tip       | Best practices                      |
+| ⚠️ Warning   | Potential risks                     |
 | 📌 Important | Information users must not overlook |
 
 Avoid placing important procedural steps inside callouts.
 
----
+</div>
 
 ## Documentation in practice
 
@@ -198,3 +179,7 @@ Continue with:
 
 - [Accessibility](accessibility.md)
 - [Docs-as-Code](docs-as-code.md)
+
+```
+
+```

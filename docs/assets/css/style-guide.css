@@ -76,3 +76,26 @@
   vertical-align: top;
   padding: 0.3rem 0.3rem;
 }
+
+/* =========================================================
+   CHECKMARK LISTS — Replaces default bullets with green ticks
+   ========================================================= */
+
+.check-list ul {
+  list-style: none; /* Hide standard bullet dots */
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 1.8rem; /* Creates space for the icon */
+  margin-bottom: 0.4rem;
+}
+
+.check-list li::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+  top: 0.05rem; /* Perfectly aligns the tick with the text */
+}

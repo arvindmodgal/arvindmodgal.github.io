@@ -49,7 +49,9 @@ hide:
 
     <div class="lead-body">
       <div class="photo-box">
-        <img src="assets/images/profile-newspaper.jpg" alt="Arvind Modgal at his desk, reviewing documentation architecture">
+        <!-- <img src="assets/images/profile-newspaper.jpg" alt="Arvind Modgal at his desk, reviewing documentation architecture">
+        <div class="photo-caption">Arvind Modgal at his desk, reviewing documentation architecture. <em>Bangalore, October.</em></div> -->
+                <img src="assets/images/profile-newspaper.jpg" alt="Arvind Modgal at his desk, reviewing documentation architecture">
         <div class="photo-caption">Arvind Modgal at his desk, reviewing documentation architecture. <em>Bangalore, October.</em></div>
       </div>
       <p class="lead-text drop-cap">

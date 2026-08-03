@@ -1,5 +1,4 @@
 ---
-
 icon: material/account-box-outline
 ---
 
@@ -15,15 +14,13 @@ Apply these guidelines to improve the usability and inclusiveness of your docume
 
 Link text should clearly describe the destination.
 
-### ✅ Preferred
+<div class="voice-table" markdown="1">
 
-For more information, see
-[Upload firmware](manage-firmware/upload-firmware.md).
+| Preferred                                                                        | Avoid                                             |
+| -------------------------------------------------------------------------------- | ------------------------------------------------- |
+| For more information, see [Upload firmware](manage-firmware/upload-firmware.md). | Click [here](manage-firmware/upload-firmware.md). |
 
-### ❌ Avoid
-
-Click
-[here](manage-firmware/upload-firmware.md).
+</div>
 
 Descriptive links improve accessibility for screen readers and help users understand where a link leads.
 
@@ -33,17 +30,13 @@ Descriptive links improve accessibility for screen readers and help users unders
 
 Provide alternative (alt) text for images that convey important information.
 
-### ✅ Preferred
+<div class="voice-table" markdown="1">
 
-```text
-Device dashboard showing firmware upload progress.
-```
+| Preferred                                            | Avoid        |
+| ---------------------------------------------------- | ------------ |
+| `Device dashboard showing firmware upload progress.` | `Screenshot` |
 
-### ❌ Avoid
-
-```text
-Screenshot
-```
+</div>
 
 If an image is purely decorative, use empty alt text so screen readers can ignore it.
 
@@ -53,23 +46,13 @@ If an image is purely decorative, use empty alt text so screen readers can ignor
 
 Organize content using a logical heading hierarchy.
 
-### ✅ Preferred
+<div class="voice-table" markdown="1">
 
-```text
-# Page title
+| Preferred                                               | Avoid                                |
+| ------------------------------------------------------- | ------------------------------------ |
+| `# Page title`<br>`## Main section`<br>`### Subsection` | `# Page title`<br>`### Main section` |
 
-## Main section
-
-### Subsection
-```
-
-### ❌ Avoid
-
-```text
-# Page title
-
-### Main section
-```
+</div>
 
 A consistent heading structure helps users navigate documentation with assistive technologies.
 
@@ -79,13 +62,13 @@ A consistent heading structure helps users navigate documentation with assistive
 
 Do not use color as the only way to communicate information.
 
-### ✅ Preferred
+<div class="voice-table" markdown="1">
 
-> Required fields are marked with an asterisk (*).
+| Preferred                                         | Avoid                                   |
+| ------------------------------------------------- | --------------------------------------- |
+| Required fields are marked with an asterisk (\*). | Fields highlighted in red are required. |
 
-### ❌ Avoid
-
-> Fields highlighted in red are required.
+</div>
 
 Users with color vision deficiencies may not distinguish color-based cues.
 
@@ -121,13 +104,13 @@ Short sentences and familiar words improve readability for:
 
 Avoid instructions that depend only on mouse actions.
 
-### ✅ Preferred
+<div class="voice-table" markdown="1">
 
-Select **Settings**.
+| Preferred                                                       | Avoid               |
+| --------------------------------------------------------------- | ------------------- |
+| Select **Settings** or use the keyboard shortcut, if available. | Click **Settings**. |
 
-### Better
-
-Select **Settings** or use the keyboard shortcut, if available.
+</div>
 
 Whenever possible, document keyboard shortcuts alongside mouse actions.
 

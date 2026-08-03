@@ -1,7 +1,5 @@
 ---
-
 icon: material/code-block-tags
-
 ---
 
 # Docs-as-Code
@@ -63,17 +61,13 @@ A logical folder structure makes content easier to maintain and navigate.
 
 Choose file names that describe the topic clearly.
 
-### ✅ Preferred
+<div class="voice-table" markdown="1">
 
-- create-a-device.md
-- upload-firmware.md
-- reset-password.md
+| Preferred                                                           | Avoid                                         |
+| ------------------------------------------------------------------- | --------------------------------------------- |
+| `create-a-device.md`<br>`upload-firmware.md`<br>`reset-password.md` | `page1.md`<br>`document.md`<br>`new-topic.md` |
 
-### ❌ Avoid
-
-- page1.md
-- document.md
-- new-topic.md
+</div>
 
 Use lowercase letters and hyphens to separate words.
 
@@ -83,26 +77,15 @@ Use lowercase letters and hyphens to separate words.
 
 Each Markdown file should describe one concept or one task.
 
-### ✅ Preferred
+<div class="voice-table" markdown="1">
 
-```
-Create a device
-```
+| Preferred       | Avoid                                                                                                                                       |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Create a device | Device management<br>&nbsp;&nbsp;- Create<br>&nbsp;&nbsp;- Update<br>&nbsp;&nbsp;- Delete<br>&nbsp;&nbsp;- Archive<br>&nbsp;&nbsp;- Restore |
 
-### ❌ Avoid
+</div>
 
-```
-Device management
-    - Create
-    - Update
-    - Delete
-    - Archive
-    - Restore
-```
-
-Smaller topics are easier to reuse, review, and update.
-
----
+## Smaller topics are easier to reuse, review, and update.
 
 ## Use version control
 

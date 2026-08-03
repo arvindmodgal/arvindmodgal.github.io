@@ -1,7 +1,5 @@
 ---
-
 icon: material/list-status
-
 ---
 
 # Editorial checklist
@@ -14,11 +12,13 @@ Use this checklist before publishing documentation to ensure it is accurate, con
 
 Verify that the content:
 
-- ✅ Meets the needs of the intended audience.
-- ✅ Focuses on one user goal or concept.
-- ✅ Is technically accurate.
-- ✅ Is complete and up to date.
-- ✅ Does not duplicate existing content.
+<div class="check-list" markdown="1">
+- Meets the needs of the intended audience.
+- Focuses on one user goal or concept.
+- Is technically accurate.
+- Is complete and up to date.
+- Does not duplicate existing content.
+</div>
 
 ---
 
@@ -26,75 +26,81 @@ Verify that the content:
 
 Verify that the writing:
 
-- ✅ Uses active voice.
-- ✅ Uses present tense.
-- ✅ Uses plain language.
-- ✅ Uses consistent terminology.
-- ✅ Is concise and free of unnecessary words.
-
+<div class="check-list" markdown="1">
+- Uses active voice.
+- Uses present tense.
+- Uses plain language.
+- Uses consistent terminology.
+- Is concise and free of unnecessary words.
+</div>
 ---
 
 ## Structure
 
 Verify that the page:
 
-- ✅ Has a clear, task-oriented title.
-- ✅ Includes a short introduction.
-- ✅ Includes prerequisites, if required.
-- ✅ Uses numbered steps for procedures.
-- ✅ Includes Next steps.
-- ✅ Includes Related tasks where appropriate.
-
+<div class="check-list" markdown="1">
+- Has a clear, task-oriented title.
+- Includes a short introduction.
+- Includes prerequisites, if required.
+- Uses numbered steps for procedures.
+- Includes Next steps.
+- Includes Related tasks where appropriate.
+</div>
 ---
 
 ## Formatting
 
 Verify that the formatting:
 
-- ✅ Uses descriptive headings.
-- ✅ Uses consistent heading levels.
-- ✅ Uses bold formatting for UI elements.
-- ✅ Uses descriptive hyperlinks.
-- ✅ Uses tables only when appropriate.
-- ✅ Uses callouts consistently.
-
+<div class="check-list" markdown="1">
+- Uses descriptive headings.
+- Uses consistent heading levels.
+- Uses bold formatting for UI elements.
+- Uses descriptive hyperlinks.
+- Uses tables only when appropriate.
+- Uses callouts consistently.
+</div>
 ---
 
 ## Accessibility
 
 Verify that the documentation:
 
-- ✅ Includes meaningful alt text for images.
-- ✅ Does not rely on color alone.
-- ✅ Uses a logical heading hierarchy.
-- ✅ Uses descriptive link text.
-- ✅ Uses plain language.
-
+<div class="check-list" markdown="1">
+- Includes meaningful alt text for images.
+- Does not rely on color alone.
+- Uses a logical heading hierarchy.
+- Uses descriptive link text.
+- Uses plain language.
+</div>
 ---
 
 ## Docs-as-Code
 
 Verify that the documentation:
 
-- ✅ Uses meaningful file names.
-- ✅ Follows the project folder structure.
-- ✅ Contains no broken links.
-- ✅ Has been reviewed before publishing.
-- ✅ Includes a meaningful Git commit message.
-
+<div class="check-list" markdown="1">
+- Uses meaningful file names.
+- Follows the project folder structure.
+- Contains no broken links.
+- Has been reviewed before publishing.
+- Includes a meaningful Git commit message.
+</div>
 ---
 
 ## Before publishing
 
 Before publishing, complete the following final checks:
 
-- ✅ Test all documented procedures.
-- ✅ Verify screenshots are current.
-- ✅ Check spelling and grammar.
-- ✅ Validate Markdown formatting.
-- ✅ Preview the documentation.
-- ✅ Confirm internal links work correctly.
-
+<div class="check-list" markdown="1">
+- Test all documented procedures.
+- Verify screenshots are current.
+- Check spelling and grammar.
+- Validate Markdown formatting.
+- Preview the documentation.
+- Confirm internal links work correctly.
+</div>
 ---
 
 ## Documentation in practice
@@ -112,4 +118,3 @@ Before publishing, complete the following final checks:
 - Check accessibility.
 - Validate Docs-as-Code practices.
 - Test procedures and hyperlinks.
-
