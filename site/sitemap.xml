@@ -2,194 +2,218 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://arvindmodgal.github.io/index.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://arvindmodgal.github.io/api-reference.html</loc>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/resume.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/index.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/api-docs/index.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/index.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/about-firmwarecheck.html</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/documentation-approach.html</loc>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/faq.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/getting-started.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/jira-integration.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-assessments.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-devices.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-users.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-your-account.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/troubleshooting.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/upload-firmware.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/jira-integration/index.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/jira-integration/connect-jira.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/jira-integration/create-jira-issue.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-devices/index.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-devices/archive-a-device.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-devices/create-a-device.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-devices/delete-a-device.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-devices/device-status.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-devices/find-a-device.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-devices/update-device-information.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-devices/what-is-a-device.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-firmware/index.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-firmware/delete-firmware.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-firmware/replace-firmware.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-firmware/upload-firmware.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/manage-firmware/what-is-firmware.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/run-assessments/index.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/run-assessments/assessment-types.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/run-assessments/run-an-assessment.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/firmwarecheck/run-assessments/view-assessment-results.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/style-guide/index.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/style-guide/accessibility.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/style-guide/common-mistakes.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/style-guide/docs-as-code.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/style-guide/editorial-checklist.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/style-guide/formatting.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://arvindmodgal.github.io/portfolio/style-guide/overview.html</loc>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/style-guide/procedures.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/style-guide/terminology.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/style-guide/voice-and-tone.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/style-guide/writing-principles.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/user-guide/index.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/user-guide/assessments.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/user-guide/jira-integration.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
     </url>
     <url>
          <loc>https://arvindmodgal.github.io/portfolio/user-guide/managing-devices.html</loc>
-         <lastmod>2026-07-26</lastmod>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://arvindmodgal.github.io/resume/index.html</loc>
+         <lastmod>2026-08-03</lastmod>
+    </url>
+    <url>
+         <loc>https://arvindmodgal.github.io/resume/index-old.html</loc>
+         <lastmod>2026-08-03</lastmod>
     </url>
 </urlset>

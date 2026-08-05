@@ -1,0 +1,101 @@
+/* =========================================================
+   Gemini GREEN & RED Table head STYLE GUIDE TABLES — Do / Don't Formatting
+   ========================================================= */
+
+/* Targets the table inside our div wrapper */
+.voice-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+/* Style the headers with compact padding and smaller font */
+.voice-table th {
+  padding: 0.1rem 0.1rem; /* Reduced top/bottom padding from 1rem to 0.4rem */
+  font-size: 0.8rem; /* Reduced font size from 1.1rem to 0.9rem */
+}
+
+/* "Preferred" Column styling (1st column) */
+.voice-table th:nth-child(1) {
+  background-color: rgba(76, 175, 80, 0.08); /* Subtle green background */
+  border-top: 4px solid #4caf50;
+  color: #2e7d32;
+}
+.voice-table th:nth-child(1)::before {
+  content: "✅ "; /* Automatically adds the tick */
+}
+
+/* "Avoid" Column styling (2nd column) */
+.voice-table th:nth-child(2) {
+  background-color: rgba(244, 67, 54, 0.08); /* Subtle red background */
+  border-top: 4px solid #f44336;
+  color: #c62828;
+}
+.voice-table th:nth-child(2)::before {
+  content: "❌ "; /* Automatically adds the cross */
+}
+
+/* Align cell content to the top so longer examples read cleanly */
+.voice-table td {
+  vertical-align: top;
+  padding: 1rem;
+}
+/* "Why / Context" Column styling (3rd column - Neutral Blue) */
+.voice-table th:nth-child(3) {
+  background-color: rgba(33, 150, 243, 0.08); /* Subtle blue background */
+  border-top: 4px solid #2196f3;
+  color: #1565c0;
+}
+.voice-table th:nth-child(3)::before {
+  content: "💡 "; /* Adds an idea/info icon */
+}
+
+/* =========================================================
+   STYLE GUIDE TABLES — Generic (Blue Theme) Formatting
+   ========================================================= */
+
+/* Targets tables inside generic-table div wrappers */
+.generic-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+/* Style all table headers with a blue accent */
+.generic-table th {
+  padding: 0.1rem 0.1rem;
+  font-size: 0.8rem;
+  background-color: rgba(33, 150, 243, 0.08); /* Subtle blue background */
+  border-top: 4px solid #2196f3; /* Blue top border */
+  color: #1565c0; /* Dark blue text */
+  text-align: left;
+}
+
+/* Align body cells to top with consistent padding */
+.generic-table td {
+  vertical-align: top;
+  padding: 0.3rem 0.3rem;
+}
+
+/* =========================================================
+   CHECKMARK LISTS — Replaces default bullets with green ticks
+   ========================================================= */
+
+.check-list ul {
+  list-style: none; /* Hide standard bullet dots */
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 1.8rem; /* Creates space for the icon */
+  margin-bottom: 0.4rem;
+}
+
+.check-list li::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+  top: 0.05rem; /* Perfectly aligns the tick with the text */
+}

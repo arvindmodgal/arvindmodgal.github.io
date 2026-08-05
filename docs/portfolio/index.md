@@ -20,6 +20,8 @@ An anonymized user guide for an IoT security platform. Covers account setup, dev
 - UI element formatting consistency (bold for buttons, monospace for code)
 - Embedded notes, tips, and warnings for critical actions
 
+[View Project →](firmwarecheck/index.md)
+
 ---
 
 ## 📐 [Style Guide](style-guide/index.md)
@@ -41,25 +43,31 @@ An anonymized excerpt from a corporate style guide I established at a banking so
 - Procedure writing with Information Mapping principles (9-step limit)
 - Numbered vs. bulleted list decision framework
 
+[View Project →](style-guide/index.md)
+
 ---
 
-## 🔌 [API Reference](api-docs/index.md)
+## 🔌 [OTA Server Sample API Documentation](ota-server-sample/index.md)
 
-**Type:** API documentation  
-**Audience:** Developers integrating with security scanning APIs  
-**Domain:** REST API, OpenAPI 3.0, IoT security  
-**Tools:** OpenAPI, YAML, Swagger Editor, Markdown
+**Type:** API documentation (open-source redesign)
 
-A complete OpenAPI 3.0 specification for firmware vulnerability scanning endpoints. Includes device management, binary uploads, and security assessment workflows.
+**Audience:** IoT developers, DevOps engineers using Onion Omega2
+
+**Domain:** IoT firmware management, OTA updates, REST API
+
+**Tools:** OpenAPI 3.0, YAML, Markdown, Material for MkDocs
+
+An independent documentation contribution for an open-source OTA firmware server with a working API but no developer documentation. The original README listed three endpoints in plain text and linked to "full API documentation" that did not exist.
 
 **Highlights:**
 
-- Full CRUD operations with request/response schemas
-- File upload endpoints with multipart/form-data
-- Asynchronous job processing patterns
-- Structured error responses with HTTP status codes
-- Bearer token authentication
-- Compliance standard references (MISRA, ISO 21434, ETSI 303 645)
+- Complete OpenAPI 3.0 specification derived from source-code analysis
+- 2-minute quickstart with verified cURL examples
+- Full request/response schemas with real data from `fwDB.json`
+- Error handling documentation with human-readable explanations
+- Progressive disclosure structure: quickstart → reference → spec download
+
+[View Project →](ota-server-sample/index.md)
 
 ---
 

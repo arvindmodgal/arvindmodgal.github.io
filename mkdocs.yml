@@ -123,8 +123,9 @@ nav:
           #- Reports: portfolio/firmwarecheck/reports.md
           - Troubleshooting: portfolio/firmwarecheck/troubleshooting.md
           - FAQ: portfolio/firmwarecheck/faq.md
-      - API Reference: api-reference.md
+      # - API Reference: api-reference.md
           # - Overview: portfolio/api-docs/index.md
+      - OTA Server Sample: portfolio/ota-server-sample/index.md         
       - Style Guide:
           - Overview: portfolio/style-guide/index.md
           - Writing Principles: portfolio/style-guide/writing-principles.md
