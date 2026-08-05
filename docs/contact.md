@@ -24,7 +24,8 @@ Whether you need developer-first API reference docs, end-to-end SDK guides, or a
     </div>
   </a>
 
-  <a href="www.linkedin.com/in/arvind-modgal-3705441ba" target="_blank" style="text-decoration: none; color: inherit;">
+  <!-- CORRECT -->
+<a href="https://www.linkedin.com/in/arvind-modgal-3705441ba" target="_blank" style="text-decoration: none; color: inherit;">
     <div style="border: 1px solid rgba(128,128,128,0.25); border-radius: 12px; padding: 20px; background: rgba(255,255,255,0.03); transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.12)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.05)';">
       <div style="font-size: 1.5rem; margin-bottom: 8px;">💼</div>
       <div style="font-weight: 700; font-size: 1.1rem; margin-bottom: 4px;">LinkedIn</div>
@@ -46,7 +47,7 @@ Whether you need developer-first API reference docs, end-to-end SDK guides, or a
 
 ---
 
-## 🛠️ Areas of Expertise
+<!-- ## 🛠️ Areas of Expertise
 
 If your team is working on any of these domains, we’ll be a great match:
 
@@ -70,4 +71,14 @@ If your team is working on any of these domains, we’ll be a great match:
   <h2 style="color: #ffffff; margin-top: 0; border: none;">Ready to Elevate Your Developer Experience?</h2>
   <p style="opacity: 0.9; max-width: 600px; margin: 10px auto 20px auto;">Great documentation turns users into champions. Let's make your product unforgettable.</p>
   <a href="mailto:arvindmodgal@outlook.com" style="background: #00FF88; color: #000000; font-weight: 700; padding: 12px 28px; border-radius: 30px; text-decoration: none; display: inline-block; box-shadow: 0 4px 15px rgba(0,255,136,0.4);">Start a Conversation</a>
-</div>
+</div> -->
+
+
+  <!-- Typing SVG Headline -->
+  <!-- <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=6366F1&center=true&vCenter=true&width=650&height=50&lines=Crafting+Clarity+in+a+Complex+World;15%2B+Years+of+Technical+Documentation;API+Docs+%7C+Docs-as-Code+%7C+End-user+Documentation" alt="Typing SVG Headline" />
+  </a> -->
+
+  
+"*Clarity is not the absence of complexity, but the mastery of it.*" Built with ❤️ and **Markdown** on GitHub
+
