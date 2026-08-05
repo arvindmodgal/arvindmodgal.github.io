@@ -1,8 +1,5 @@
 # OTA Server Sample API Documentation
 
-```markdown
-# OTA Server Sample API Documentation
-
 **Type:** API documentation (open-source redesign)
 
 **Audience:** IoT developers, DevOps engineers using Onion Omega2

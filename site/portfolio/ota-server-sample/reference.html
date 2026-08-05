@@ -13,7 +13,7 @@
         <meta name="author" content="Arvind Modgal">
       
       
-        <link rel="canonical" href="https://arvindmodgal.github.io/portfolio/api-docs/index.html">
+        <link rel="canonical" href="https://arvindmodgal.github.io/portfolio/ota-server-sample/reference.html">
       
       
       
@@ -26,7 +26,7 @@
     
     
       
-        <title>API Reference - Arvind Modgal — Technical Writer</title>
+        <title>Endpoint Reference - Arvind Modgal — Technical Writer</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#api-reference" class="md-skip">
+        <a href="#endpoint-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API Reference
+              Endpoint Reference
             
           </span>
         </div>
@@ -1431,14 +1431,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api-reference.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    API Reference
+    OTA Server Sample
   
 
     
@@ -1837,6 +1837,159 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="POST /">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request body
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /{device}
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GET /{device}">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#path-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-devicefwtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /{device}/{fwType}
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GET /{device}/{fwType}">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#path-parameters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response schemas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Response schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#firmwarerelease" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FirmwareRelease
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1860,11 +2013,170 @@
 
 
 
-<h1 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Coming Soon</p>
-<p>This section will feature a complete OpenAPI 3.0 specification for firmware vulnerability scanning endpoints, rendered with Swagger UI.</p>
-</div>
+<h1 id="endpoint-reference">Endpoint Reference<a class="headerlink" href="#endpoint-reference" title="Permanent link">&para;</a></h1>
+<p>All endpoints are served from the base URL <code>http://localhost:8080</code> (default development port). No authentication is required.</p>
+<hr />
+<h2 id="post">POST <code>/</code><a class="headerlink" href="#post" title="Permanent link">&para;</a></h2>
+<p>Report firmware update status.</p>
+<h3 id="request-body">Request body<a class="headerlink" href="#request-body" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>device</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Device type: <code>omega2</code>, <code>omega2p</code>, <code>omega2pro</code></td>
+</tr>
+<tr>
+<td><code>current_version</code></td>
+<td>string</td>
+<td>Yes</td>
+<td>Installed firmware version</td>
+</tr>
+<tr>
+<td><code>current_build</code></td>
+<td>integer</td>
+<td>Yes</td>
+<td>Installed firmware build number</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>string</td>
+<td>Yes</td>
+<td><code>success</code>, <code>failed</code>, or <code>pending</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Body</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200 OK</code></td>
+<td><code>{"success": "OK"}</code></td>
+<td>Status recorded</td>
+</tr>
+<tr>
+<td><code>400 Bad Request</code></td>
+<td><code>{"error": "...", "message": "..."}</code></td>
+<td>Missing or invalid field</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="get-device">GET <code>/{device}</code><a class="headerlink" href="#get-device" title="Permanent link">&para;</a></h2>
+<p>List all available firmware releases for a device.</p>
+<h3 id="path-parameters">Path parameters<a class="headerlink" href="#path-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>device</code></td>
+<td>string</td>
+<td>Device type: <code>omega2</code>, <code>omega2p</code>, <code>omega2pro</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="response_1">Response<a class="headerlink" href="#response_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Body</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200 OK</code></td>
+<td>Array of <code>FirmwareRelease</code> objects</td>
+<td>All firmware releases, sorted by build descending</td>
+</tr>
+<tr>
+<td><code>404 Not Found</code></td>
+<td><code>{"error": "...", "message": "..."}</code></td>
+<td>Device not found</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="get-devicefwtype">GET <code>/{device}/{fwType}</code><a class="headerlink" href="#get-devicefwtype" title="Permanent link">&para;</a></h2>
+<p>Get a specific firmware release.</p>
+<h3 id="path-parameters_1">Path parameters<a class="headerlink" href="#path-parameters_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>device</code></td>
+<td>string</td>
+<td>Device type</td>
+</tr>
+<tr>
+<td><code>fwType</code></td>
+<td>string</td>
+<td><code>latest</code> (highest build) or <code>stable</code> (highest stable build)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response_2">Response<a class="headerlink" href="#response_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Body</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200 OK</code></td>
+<td>Single <code>FirmwareRelease</code> object</td>
+<td>Matching firmware release</td>
+</tr>
+<tr>
+<td><code>404 Not Found</code></td>
+<td><code>{"error": "...", "message": "..."}</code></td>
+<td>No matching firmware for device/type</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="response-schemas">Response schemas<a class="headerlink" href="#response-schemas" title="Permanent link">&para;</a></h2>
+<h3 id="firmwarerelease">FirmwareRelease<a class="headerlink" href="#firmwarerelease" title="Permanent link">&para;</a></h3>
+<p>```json
+{
+  "version": "0.3.2",
+  "url": "http://repo.onioniot.com/omega2/images/omega2p-v0.3.2-b233.bin",
+  "build": 233,
+  "device": "omega2p",
+  "stable": true
+}</p>
 
 
 

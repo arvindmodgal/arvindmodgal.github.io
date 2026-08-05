@@ -1,0 +1,199 @@
+openapi: 3.0.3
+info:
+  title: OTA Server Sample API
+  description: |
+    API for managing Over-The-Air (OTA) firmware updates for Onion Omega2 IoT devices.
+    
+    **About this documentation:** The original project README listed three endpoints in plain text, linked to "full API documentation" that did not exist, and provided no parameter descriptions, request schemas, or working examples. This OpenAPI 3.0 specification was created from source-code analysis and verified against a locally running instance to provide a complete, usable developer reference.
+  version: 1.0.0
+  contact:
+    name: OnionIoT
+    url: https://github.com/OnionIoT/OTA-Server-Sample
+
+servers:
+  - url: http://localhost:8080
+    description: Local development server
+
+paths:
+  /:
+    post:
+      summary: Report firmware update status
+      description: |
+        Reports the current firmware status of a device back to the server.
+        Used by the `oupgrade` client to log update attempts and outcomes.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FirmwareStatusReport'
+            example:
+              device: omega2p
+              current_version: "0.3.2"
+              current_build: 233
+              status: success
+      responses:
+        '200':
+          description: Status recorded successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponse'
+              example:
+                success: "OK"
+        '400':
+          description: Invalid request body
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                error: "Bad Request"
+                message: "Missing required field: device"
+
+  /{device}:
+    get:
+      summary: List all available firmware for a device
+      description: |
+        Returns all firmware releases available for the specified device type.
+        Results include both stable and non-stable builds, sorted by build number in descending order.
+      parameters:
+        - name: device
+          in: path
+          required: true
+          description: Device type identifier
+          schema:
+            type: string
+            enum: [omega2, omega2p, omega2pro]
+            example: omega2p
+      responses:
+        '200':
+          description: Array of firmware releases
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FirmwareRelease'
+              example:
+                - version: "0.3.2"
+                  url: "http://repo.onioniot.com/omega2/images/omega2p-v0.3.2-b234.bin"
+                  build: 234
+                  device: omega2p
+                  stable: false
+                - version: "0.3.2"
+                  url: "http://repo.onioniot.com/omega2/images/omega2p-v0.3.2-b233.bin"
+                  build: 233
+                  device: omega2p
+                  stable: true
+        '404':
+          description: No firmware found for device
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /{device}/{fwType}:
+    get:
+      summary: Get specific firmware release
+      description: |
+        Retrieves a single firmware release based on stability filter.
+        Use `latest` for the highest build number, or `stable` for the highest stable build.
+      parameters:
+        - name: device
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: [omega2, omega2p, omega2pro]
+            example: omega2p
+        - name: fwType
+          in: path
+          required: true
+          description: Release filter type
+          schema:
+            type: string
+            enum: [latest, stable]
+            example: stable
+      responses:
+        '200':
+          description: Matching firmware release
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FirmwareRelease'
+              example:
+                version: "0.3.2"
+                url: "http://repo.onioniot.com/omega2/images/omega2p-v0.3.2-b233.bin"
+                build: 233
+                device: omega2p
+                stable: true
+        '404':
+          description: No matching firmware found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    FirmwareRelease:
+      type: object
+      required: [version, url, build, device, stable]
+      properties:
+        version:
+          type: string
+          description: Firmware version number
+          example: "0.3.2"
+        url:
+          type: string
+          format: uri
+          description: Direct URL to the firmware binary
+          example: "http://repo.onioniot.com/omega2/images/omega2p-v0.3.2-b233.bin"
+        build:
+          type: integer
+          description: Firmware build number
+          example: 233
+        device:
+          type: string
+          description: Device type identifier
+          example: omega2p
+        stable:
+          type: boolean
+          description: Whether this is a stable release
+          example: true
+
+    FirmwareStatusReport:
+      type: object
+      required: [device, current_version, current_build, status]
+      properties:
+        device:
+          type: string
+          example: omega2p
+        current_version:
+          type: string
+          example: "0.3.2"
+        current_build:
+          type: integer
+          example: 233
+        status:
+          type: string
+          enum: [success, failed, pending]
+          example: success
+
+    StatusResponse:
+      type: object
+      properties:
+        success:
+          type: string
+          example: "OK"
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "Not Found"
+        message:
+          type: string
+          example: "No firmware found for device: omega2x"
