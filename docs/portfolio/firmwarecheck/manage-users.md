@@ -8,7 +8,7 @@ icon: material/account-multiple-outline
 
 Administrators manage user access by inviting users, assigning roles, and removing users from the FirmwareCheck workspace.
 
-You can share access to Binary Check with other people, such as business partners and employees, and give them either of two levels of access. 
+You can share access to FirmwareCheck with other people, such as business partners and employees, and give them either of two levels of access. 
 
 You can also remove access at any time.
 

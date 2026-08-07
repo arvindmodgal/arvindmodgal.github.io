@@ -85,7 +85,7 @@ From here you can:
 ### Accept an invitation
 
 Use this procedure if a FirmwareCheck administrator has invited you to join an existing organization. 
-Your manager/colleagues with Binary Check access can invite you to use the application. They can nominate you either as a user or an administrator of an account.
+Your manager/colleagues with FirmwareCheck access can invite you to use the application. They can nominate you either as a user or an administrator of an account.
 
 #### Before you begin
 
