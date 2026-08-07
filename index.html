@@ -1,0 +1,2386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arvind Modgal — Senior Technical Writer</title>
+    <!-- Inter Sans-Serif Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --hero-blue: #1b3baa;
+        --hero-blue-dark: #122878;
+        --hero-blue-light: #2b52d4;
+        --bg-light: #f8fafc;
+        --bg-white: #ffffff;
+        --text-dark: #1e293b;
+        --text-muted: #64748b;
+        --card-border: #e2e8f0;
+        --accent-line: #1b3baa;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        color: var(--text-dark);
+        background: var(--bg-white);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Navigation */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 1rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+        background: transparent;
+      }
+
+      .navbar.scrolled {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        padding: 0.75rem 4rem;
+      }
+
+      .navbar.scrolled .logo,
+      .navbar.scrolled .nav-links a {
+        color: var(--text-dark);
+      }
+
+      .navbar.scrolled .nav-links a:hover {
+        color: var(--hero-blue);
+      }
+
+      .navbar.scrolled .nav-links a::after {
+        background: var(--hero-blue);
+      }
+
+      .logo {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.3s;
+      }
+
+      .logo-dot {
+        width: 8px;
+        height: 8px;
+        background: var(--hero-blue-light);
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        position: relative;
+        transition: color 0.3s ease;
+        padding: 0.25rem 0;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: white;
+        transition: width 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--hero-blue-light);
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .nav-buttons {
+        display: flex;
+        gap: 0.75rem;
+      }
+
+      .btn {
+        padding: 0.6rem 1.4rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 1px solid transparent;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      /* Default Header Buttons */
+      .btn-white {
+        background: white;
+        color: var(--hero-blue);
+        border: 1px solid white;
+      }
+
+      .btn-white:hover {
+        background: rgba(255, 255, 255, 0.9);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+      .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: white;
+      }
+
+      /* Scrolled Header Button States */
+      .navbar.scrolled #nav-resume {
+        background: transparent;
+        color: var(--hero-blue);
+        border: 1px solid var(--hero-blue);
+      }
+
+      .navbar.scrolled #nav-resume:hover {
+        background: rgba(27, 59, 170, 0.08);
+      }
+
+      .navbar.scrolled #nav-portfolio {
+        background: var(--hero-blue);
+        color: white;
+        border: 1px solid var(--hero-blue);
+      }
+
+      .navbar.scrolled #nav-portfolio:hover {
+        background: var(--hero-blue-dark);
+        box-shadow: 0 4px 12px rgba(27, 59, 170, 0.3);
+      }
+
+      /* Hero Section */
+      .hero {
+        background: var(--hero-blue);
+        min-height: 100vh;
+        padding: 7rem 4rem 3.5rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.08) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
+
+      .hero-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 3.5rem;
+        align-items: center;
+      }
+
+      /* Rectangle badge with rounded edges */
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-bottom: 1.25rem;
+        backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+      }
+
+      .hero-badge svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .hero-title {
+        font-family: "Inter", sans-serif;
+        font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+        font-weight: 800;
+        color: white;
+        line-height: 1.2;
+        margin-bottom: 1.25rem;
+        letter-spacing: -0.02em;
+      }
+
+      .no-break {
+        white-space: nowrap;
+        display: inline-block;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.88);
+        max-width: 500px;
+        margin-bottom: 2rem;
+        line-height: 1.65;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+      }
+
+      /* Translucent Glass Box Stats Styling */
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        max-width: 560px;
+      }
+
+      .stat-item {
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 16px;
+        padding: 1.25rem 1.25rem;
+        text-align: left;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.15);
+        animation: floatStat 6s ease-in-out infinite alternate;
+      }
+
+      .stat-item:nth-child(2) {
+        animation-delay: -2s;
+      }
+
+      .stat-item:nth-child(3) {
+        animation-delay: -4s;
+      }
+
+      .stat-item:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.18);
+        border-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.25);
+      }
+
+      .stat-number {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: white;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.02em;
+      }
+
+      .stat-label {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.35;
+      }
+
+      @keyframes floatStat {
+        0% {
+          transform: translateY(0px);
+        }
+        100% {
+          transform: translateY(-6px);
+        }
+      }
+
+      /* Floating Hero Visual Component */
+      .hero-visual {
+        position: relative;
+        width: 100%;
+        height: 440px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .glow-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        opacity: 0.4;
+        animation: pulse 8s infinite alternate ease-in-out;
+      }
+
+      .orb-1 {
+        width: 320px;
+        height: 320px;
+        background: #3b82f6;
+        top: 0;
+        right: 0;
+      }
+
+      .orb-2 {
+        width: 280px;
+        height: 280px;
+        background: #60a5fa;
+        bottom: 20px;
+        left: 20px;
+        animation-delay: -4s;
+      }
+
+      .doc-card {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 16px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        padding: 24px;
+        transition: transform 0.5s ease;
+      }
+
+      .doc-front {
+        width: 300px;
+        height: 350px;
+        z-index: 3;
+        animation: float 6s infinite ease-in-out;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        left: 10%;
+      }
+
+      .doc-back {
+        width: 280px;
+        height: 320px;
+        z-index: 2;
+        right: 5%;
+        top: 5%;
+        background: rgba(15, 23, 42, 0.75);
+        border-color: rgba(255, 255, 255, 0.15);
+        color: #a7f3d0;
+        font-family: monospace;
+        font-size: 0.85rem;
+        animation: float 7s infinite ease-in-out reverse;
+      }
+
+      .doc-side {
+        width: 230px;
+        height: 180px;
+        z-index: 1;
+        left: 2%;
+        bottom: 2%;
+        transform: rotate(-6deg);
+        animation: float 8s infinite ease-in-out 1s;
+      }
+
+      .mock-header {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .mock-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+      }
+      .mock-dot.red {
+        background: #f87171;
+      }
+      .mock-dot.yellow {
+        background: #fbbf24;
+      }
+      .mock-dot.green {
+        background: #34d399;
+      }
+
+      .mock-title {
+        height: 14px;
+        width: 60%;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 4px;
+        margin-bottom: 16px;
+      }
+      .mock-line {
+        height: 8px;
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      .mock-line.short {
+        width: 40%;
+      }
+      .mock-line.med {
+        width: 75%;
+      }
+      .mock-line.long {
+        width: 95%;
+      }
+
+      .c-purple {
+        color: #c084fc;
+      }
+      .c-blue {
+        color: #60a5fa;
+      }
+      .c-green {
+        color: #34d399;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-12px) rotate(1deg);
+        }
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 0.3;
+        }
+        100% {
+          transform: scale(1.1);
+          opacity: 0.5;
+        }
+      }
+
+      /* Section Tightening */
+      .section {
+        padding: 3.5rem 4rem;
+      }
+
+      .section-alt {
+        background: var(--bg-light);
+      }
+
+      .section-header {
+        max-width: 1280px;
+        margin: 0 auto 1.75rem;
+      }
+
+      .section-label {
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--hero-blue);
+        margin-bottom: 0.5rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 0.5rem;
+      }
+
+      .section-desc {
+        font-size: 1.05rem;
+        color: var(--text-muted);
+        max-width: 600px;
+        line-height: 1.6;
+      }
+
+      .services-grid {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+
+      .service-card {
+        background: var(--bg-white);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        padding: 1.75rem;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        cursor: default;
+      }
+
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        background: var(--accent-line);
+        transition: height 0.3s ease;
+      }
+
+      .service-card:hover {
+        transform: scale(1.02) translateY(-4px);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.06);
+        border-color: transparent;
+      }
+
+      .service-card:hover::before {
+        height: 4px;
+      }
+
+      .service-icon {
+        width: 44px;
+        height: 44px;
+        background: rgba(27, 59, 170, 0.08);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        color: var(--hero-blue);
+      }
+
+      .service-icon svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .service-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+        color: var(--text-dark);
+      }
+
+      .service-desc {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.55;
+      }
+
+      /* Featured Work Section */
+      .featured-header {
+        max-width: 1280px;
+        margin: 0 auto 1.75rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .back-to-top {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--card-border);
+        border-radius: 50px;
+        transition: all 0.3s;
+      }
+
+      .back-to-top:hover {
+        background: var(--hero-blue);
+        color: white;
+        border-color: var(--hero-blue);
+      }
+
+      .projects-grid {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+
+      .project-card {
+        background: var(--bg-white);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+      }
+
+      .project-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        background: var(--accent-line);
+        transition: height 0.3s ease;
+        z-index: 2;
+      }
+
+      .project-card:hover {
+        transform: scale(1.02) translateY(-4px);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+      }
+
+      .project-card:hover::before {
+        height: 4px;
+      }
+
+      /* SVG Vector Card Header Styles */
+      .project-header {
+        height: 185px;
+        position: relative;
+        overflow: hidden;
+        background: var(--bg-light);
+      }
+
+      .project-svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .project-card:hover .project-svg {
+        transform: scale(1.04);
+      }
+
+      .project-body {
+        padding: 1.5rem;
+      }
+
+      .project-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+      }
+
+      .project-desc {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.55;
+        margin-bottom: 1rem;
+      }
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .project-tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.75rem;
+        background: rgba(27, 59, 170, 0.08);
+        color: var(--hero-blue);
+        border-radius: 50px;
+        font-weight: 500;
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        color: var(--hero-blue);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: gap 0.3s;
+      }
+
+      .project-link:hover {
+        gap: 0.6rem;
+      }
+
+      /* Tech Banner Marquee */
+      .tech-banner {
+        background: var(--bg-white);
+        padding: 2rem 0;
+        border-top: 1px solid var(--card-border);
+        border-bottom: 1px solid var(--card-border);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .tech-banner::before,
+      .tech-banner::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 150px;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .tech-banner::before {
+        left: 0;
+        background: linear-gradient(to right, white, transparent);
+      }
+
+      .tech-banner::after {
+        right: 0;
+        background: linear-gradient(to left, white, transparent);
+      }
+
+      .tech-label {
+        text-align: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 1.25rem;
+      }
+
+      .marquee-track {
+        display: flex;
+        width: max-content;
+        animation: marquee 30s linear infinite;
+      }
+
+      .marquee-track:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .tech-item {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.6rem 1.5rem;
+        margin: 0 0.75rem;
+        background: var(--bg-light);
+        border-radius: 50px;
+        border: 1px solid var(--card-border);
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--text-dark);
+        white-space: nowrap;
+      }
+
+      .tech-item svg {
+        width: 18px;
+        height: 18px;
+        color: var(--hero-blue);
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: var(--hero-blue);
+        padding: 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        top: -30%;
+        left: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.06) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+      }
+
+      .cta-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 3rem;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-label {
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 0.75rem;
+      }
+
+      .cta-title {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: white;
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+      }
+
+      .cta-desc {
+        font-size: 1.05rem;
+        color: rgba(255, 255, 255, 0.85);
+        max-width: 500px;
+        line-height: 1.6;
+      }
+
+      .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .cta-buttons .btn {
+        justify-content: center;
+        padding: 0.85rem 2rem;
+        font-size: 0.95rem;
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--bg-white);
+        padding: 2rem 4rem;
+        border-top: 1px solid var(--card-border);
+      }
+
+      .footer-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-brand {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer-name {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-dark);
+      }
+
+      .footer-title {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-top: 0.25rem;
+      }
+
+      .footer-socials {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid var(--card-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .social-link:hover {
+        background: var(--hero-blue);
+        color: white;
+        border-color: var(--hero-blue);
+        transform: translateY(-3px);
+      }
+
+      .social-link svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .hero-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .hero-subtitle {
+          margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+          margin: 0 auto;
+        }
+
+        .hero-visual {
+          display: none;
+        }
+
+        .services-grid,
+        .projects-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .cta-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .cta-desc {
+          margin: 0 auto 2rem;
+        }
+
+        .cta-buttons {
+          flex-direction: row;
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .navbar {
+          padding: 1rem 1.5rem;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .hero {
+          padding: 6rem 1.5rem 3rem;
+        }
+
+        .hero-title {
+          font-size: 2.1rem;
+        }
+
+        .hero-stats {
+          grid-template-columns: 1fr;
+        }
+
+        .section {
+          padding: 2.5rem 1.5rem;
+        }
+
+        .services-grid,
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .featured-header {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .cta-section {
+          padding: 2.5rem 1.5rem;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+        }
+
+        .footer-container {
+          flex-direction: column;
+          gap: 1.5rem;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <a href="#" class="logo">
+        <span class="logo-dot"></span>
+        Arvind Modgal
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="#services">What I do</a></li>
+        <!-- <li><a href="#projects">Projects</a></li> -->
+        <li><a href="/portfolio/">Projects</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="resume.html" class="btn btn-outline" id="nav-resume">
+          Resume
+        </a>
+        <!-- <a href="docs/resume.md" class="btn btn-outline" id="nav-resume">
+          Resume
+        </a> -->
+
+        <a href="/portfolio/" class="btn btn-white" id="nav-portfolio"
+          >Portfolio</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="top">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            15+ Years of Technical Writing & Information Architecture
+          </div>
+          <h1 class="hero-title">
+            <!-- Structured docs.<br />
+            Clear language.<br />
+            <span class="no-break">Measurable outcomes.</span> -->
+            Making technical products easy to understand.
+          </h1>
+          <p class="hero-subtitle">
+            I work with product and engineering teams to explain how complex
+            systems behave in real use. I’ve written installation guides, user
+            and admin docs, API references, and UX copy for software products.
+          </p>
+          <!-- <p class="hero-subtitle">
+            This site showcases selected projects along with examples of how I
+            structure documentation and use docs-as-code workflows.
+          </p> -->
+          <div class="hero-buttons">
+            <!-- <a href="assets/resume.pdf" class="btn btn-white"
+              >Download resume</a
+            > -->
+            <a
+              href="assets/resume.pdf"
+              class="btn btn-white"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Download resume</a
+            >
+            <a href="/portfolio/" class="btn btn-outline">View work</a>
+          </div>
+
+          <!-- Translucent Glass Box Stats -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">15+</div>
+              <div class="stat-label">Years<br />Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100+</div>
+              <div class="stat-label">Documentation<br />Assets</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">5</div>
+              <div class="stat-label">Industries<br />Served</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CSS Abstract Hero Graphic -->
+        <div class="hero-visual">
+          <div class="glow-orb orb-1"></div>
+          <div class="glow-orb orb-2"></div>
+
+          <!-- Background API/Code Panel -->
+          <div class="doc-card doc-back">
+            <div class="mock-header">
+              <div class="mock-dot red"></div>
+              <div class="mock-dot yellow"></div>
+              <div class="mock-dot green"></div>
+            </div>
+            <div style="margin-top: 16px">
+              <span class="c-purple">POST</span> /v1/documents<br /><br />
+              {<br />
+              &nbsp;&nbsp;<span class="c-blue">"status"</span>:
+              <span class="c-green">200</span>,<br />
+              &nbsp;&nbsp;<span class="c-blue">"message"</span>:
+              <span class="c-green">"Success"</span>,<br />
+              &nbsp;&nbsp;<span class="c-blue">"clarity"</span>:
+              <span class="c-green">"100%"</span><br />
+              }<br /><br />
+              <span style="color: rgba(255, 255, 255, 0.4)"
+                >// End of response</span
+              >
+            </div>
+          </div>
+
+          <!-- Side Proposal Snippet -->
+          <div class="doc-card doc-side">
+            <div class="mock-title" style="width: 80%"></div>
+            <div class="mock-line long"></div>
+            <div class="mock-line med"></div>
+            <div class="mock-line short"></div>
+            <div class="mock-line long" style="margin-top: 14px"></div>
+            <div class="mock-line med"></div>
+          </div>
+
+          <!-- Front Text Document -->
+          <div class="doc-card doc-front">
+            <div class="mock-header">
+              <div class="mock-title"></div>
+            </div>
+            <div class="mock-line long"></div>
+            <div class="mock-line long"></div>
+            <div class="mock-line med"></div>
+            <br />
+            <div style="display: flex; gap: 12px; align-items: center">
+              <div
+                style="
+                  width: 36px;
+                  height: 36px;
+                  border-radius: 8px;
+                  background: rgba(255, 255, 255, 0.25);
+                "
+              ></div>
+              <div style="flex: 1">
+                <div class="mock-line med"></div>
+                <div class="mock-line short"></div>
+              </div>
+            </div>
+            <br />
+            <div class="mock-line long"></div>
+            <div class="mock-line med"></div>
+            <div class="mock-line long"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section class="section" id="services">
+      <div class="section-header reveal">
+        <div class="section-label">What I Do</div>
+        <h2 class="section-title">
+          Documentation that simplifies complex products
+        </h2>
+        <p class="section-desc">
+          User guides, API docs, proposals, and documentation strategy for
+          technical teams.
+        </p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-title">API / Dev Documentation</h3>
+          <p class="service-desc">
+            Structured endpoints, clear authentication flows, and code snippets
+            that developers actually love using.
+          </p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              ></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-title">User Documentation</h3>
+          <p class="service-desc">
+            Task-based user guides, administrator guides, online help systems
+            and knowledge bases.
+          </p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path
+                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="service-title">UX Writing</h3>
+          <p class="service-desc">
+            Interface copy, onboarding flows, product microcopy and error
+            messages.
+          </p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              ></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h3 class="service-title">Proposal Writing</h3>
+          <p class="service-desc">
+            Technical proposals, RFP responses, executive summaries and solution
+            documentation.
+          </p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+              ></path>
+              <path
+                d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="service-title">Content Audits</h3>
+          <p class="service-desc">
+            Comprehensive reviews of legacy docs to identify gaps, restructure
+            taxonomy, and improve readability.
+          </p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path
+                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="service-title">Documentation Strategy</h3>
+          <p class="service-desc">
+            Documentation audits, governance, content planning, Docs-as-Code
+            implementation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section class="section section-alt" id="projects">
+      <div class="featured-header reveal">
+        <div>
+          <div class="section-label">Featured Work</div>
+          <h2 class="section-title">Selected documentation projects</h2>
+          <p class="section-desc">
+            Documentation designed around user goals, clarity, consistency, and
+            measurable business value.
+          </p>
+        </div>
+        <a href="#top" class="back-to-top">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+          Back to top
+        </a>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project Card 1: FirmwareCheck User Guide (SVG Vector Header) -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <svg
+              class="project-svg"
+              viewBox="0 0 400 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#0f172a" />
+                  <stop offset="50%" stop-color="#122878" />
+                  <stop offset="100%" stop-color="#1b3baa" />
+                </linearGradient>
+                <pattern
+                  id="grid1"
+                  width="18"
+                  height="18"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M 18 0 L 0 0 0 18"
+                    fill="none"
+                    stroke="#ffffff"
+                    stroke-width="0.5"
+                    stroke-opacity="0.1"
+                  />
+                </pattern>
+                <linearGradient
+                  id="laptopGrad"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#1e293b" />
+                  <stop offset="100%" stop-color="#0f172a" />
+                </linearGradient>
+              </defs>
+
+              <!-- Blueprint Grid Background -->
+              <rect width="400" height="200" fill="url(#bg1)" />
+              <rect width="400" height="200" fill="url(#grid1)" />
+
+              <!-- Vector Laptop Graphic (Inspired by Image 21f226) -->
+              <g transform="translate(10, 5)">
+                <!-- Laptop Screen Outer -->
+                <rect
+                  x="105"
+                  y="32"
+                  width="190"
+                  height="118"
+                  rx="8"
+                  fill="url(#laptopGrad)"
+                  stroke="#3b82f6"
+                  stroke-width="1.5"
+                />
+                <!-- Header bar -->
+                <path
+                  d="M105 40 C105 35.5 108.5 32 113 32 L287 32 C291.5 32 295 35.5 295 40 L295 48 L105 48 Z"
+                  fill="#334155"
+                />
+                <circle cx="115" cy="40" r="3" fill="#f87171" />
+                <circle cx="123" cy="40" r="3" fill="#fbbf24" />
+                <circle cx="131" cy="40" r="3" fill="#34d399" />
+
+                <!-- Search Bar UI -->
+                <rect
+                  x="117"
+                  y="56"
+                  width="105"
+                  height="10"
+                  rx="3"
+                  fill="#ec4899"
+                />
+                <circle cx="216" cy="61" r="2.5" fill="white" />
+
+                <!-- Analytics Bar UI -->
+                <rect
+                  x="117"
+                  y="74"
+                  width="12"
+                  height="40"
+                  rx="2"
+                  fill="#8b5cf6"
+                />
+                <rect
+                  x="133"
+                  y="84"
+                  width="12"
+                  height="30"
+                  rx="2"
+                  fill="#3b82f6"
+                />
+                <rect
+                  x="149"
+                  y="68"
+                  width="12"
+                  height="46"
+                  rx="2"
+                  fill="#10b981"
+                />
+
+                <!-- Content Lines -->
+                <rect
+                  x="168"
+                  y="74"
+                  width="55"
+                  height="5"
+                  rx="2"
+                  fill="#94a3b8"
+                />
+                <rect
+                  x="168"
+                  y="84"
+                  width="45"
+                  height="5"
+                  rx="2"
+                  fill="#64748b"
+                />
+                <rect
+                  x="168"
+                  y="94"
+                  width="50"
+                  height="5"
+                  rx="2"
+                  fill="#64748b"
+                />
+
+                <!-- Security Card Widget -->
+                <rect
+                  x="230"
+                  y="56"
+                  width="55"
+                  height="60"
+                  rx="6"
+                  fill="#1e293b"
+                  stroke="#38bdf8"
+                  stroke-width="1"
+                />
+                <path
+                  d="M257 66 L267 71 V80 C267 86 257 90 257 90 C257 90 247 86 247 80 V71 L257 66 Z"
+                  fill="#38bdf8"
+                  fill-opacity="0.2"
+                  stroke="#38bdf8"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M254 78 L256 80 L261 74"
+                  stroke="#38bdf8"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <!-- Laptop Base -->
+                <path
+                  d="M85 150 L315 150 C319 150 321 153 317 156 L305 163 C303 164 299 165 295 165 L105 165 C101 165 97 164 95 163 L83 156 C79 153 81 150 85 150 Z"
+                  fill="#475569"
+                />
+                <rect
+                  x="175"
+                  y="152"
+                  width="50"
+                  height="4"
+                  rx="2"
+                  fill="#64748b"
+                />
+              </g>
+
+              <!-- Floating Badge Left (Monitor Line Icon from Image 21f284) -->
+              <g transform="translate(42, 60)">
+                <rect
+                  width="44"
+                  height="44"
+                  rx="10"
+                  fill="#1b3baa"
+                  stroke="rgba(255,255,255,0.3)"
+                  stroke-width="1"
+                  filter="drop-shadow(0px 6px 12px rgba(0,0,0,0.35))"
+                />
+                <rect
+                  x="12"
+                  y="13"
+                  width="20"
+                  height="14"
+                  rx="2"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <line
+                  x1="18"
+                  y1="31"
+                  x2="26"
+                  y2="31"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="22"
+                  y1="27"
+                  x2="22"
+                  y2="31"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </g>
+
+              <!-- Floating Badge Right (Check badge) -->
+              <g transform="translate(315, 85)">
+                <rect
+                  width="40"
+                  height="40"
+                  rx="10"
+                  fill="#10b981"
+                  filter="drop-shadow(0px 6px 12px rgba(0,0,0,0.3))"
+                />
+                <path
+                  d="M13 20 L17 24 L27 14"
+                  stroke="white"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">FirmwareCheck User Guide</h3>
+            <p class="project-desc">
+              A complete task-based user guide created using Material for MkDocs
+              for a cybersecurity SaaS platform.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">MkDocs</span>
+              <span class="project-tag">Markdown</span>
+              <span class="project-tag">Cybersecurity</span>
+            </div>
+            <a href="/portfolio/firmwarecheck/" class="project-link">
+              View Project →
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Card 2: Technical Writing Style Guide (SVG Vector Header) -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <svg
+              class="project-svg"
+              viewBox="0 0 400 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#090d16" />
+                  <stop offset="50%" stop-color="#0f172a" />
+                  <stop offset="100%" stop-color="#1e293b" />
+                </linearGradient>
+                <pattern
+                  id="dotGrid"
+                  width="16"
+                  height="16"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <circle
+                    cx="8"
+                    cy="8"
+                    r="1.5"
+                    fill="#ffffff"
+                    fill-opacity="0.14"
+                  />
+                </pattern>
+                <linearGradient
+                  id="cardGrad"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#334155" />
+                  <stop offset="100%" stop-color="#1e293b" />
+                </linearGradient>
+              </defs>
+
+              <!-- Dark Dot-Grid Background (Inspired by Image 21f284 middle) -->
+              <rect width="400" height="200" fill="url(#bg2)" />
+              <rect width="400" height="200" fill="url(#dotGrid)" />
+
+              <!-- Vector Dashboard Component (Inspired by Image 21ef40) -->
+              <g transform="translate(10, 5)">
+                <!-- Window Frame -->
+                <rect
+                  x="85"
+                  y="25"
+                  width="220"
+                  height="140"
+                  rx="10"
+                  fill="#0f172a"
+                  stroke="#334155"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M85 35 C85 29.5 89.5 25 95 25 L295 25 C300.5 25 305 29.5 305 35 L305 44 L85 44 Z"
+                  fill="#1e293b"
+                />
+                <circle cx="97" cy="34" r="3" fill="#f87171" />
+                <circle cx="106" cy="34" r="3" fill="#fbbf24" />
+                <circle cx="115" cy="34" r="3" fill="#34d399" />
+
+                <!-- Donut Chart Widget Card -->
+                <rect
+                  x="98"
+                  y="55"
+                  width="92"
+                  height="95"
+                  rx="8"
+                  fill="url(#cardGrad)"
+                />
+                <circle
+                  cx="144"
+                  cy="95"
+                  r="22"
+                  stroke="#8b5cf6"
+                  stroke-width="8"
+                  stroke-dasharray="100 40"
+                  fill="none"
+                />
+                <circle
+                  cx="144"
+                  cy="95"
+                  r="22"
+                  stroke="#ec4899"
+                  stroke-width="8"
+                  stroke-dasharray="35 105"
+                  stroke-dashoffset="-70"
+                  fill="none"
+                />
+                <circle
+                  cx="144"
+                  cy="95"
+                  r="22"
+                  stroke="#fbbf24"
+                  stroke-width="8"
+                  stroke-dasharray="25 115"
+                  stroke-dashoffset="-105"
+                  fill="none"
+                />
+                <rect
+                  x="114"
+                  y="130"
+                  width="60"
+                  height="5"
+                  rx="2"
+                  fill="#94a3b8"
+                />
+
+                <!-- Bar Graph Widget Card -->
+                <rect
+                  x="200"
+                  y="55"
+                  width="92"
+                  height="95"
+                  rx="8"
+                  fill="url(#cardGrad)"
+                />
+                <rect
+                  x="212"
+                  y="105"
+                  width="11"
+                  height="30"
+                  rx="2"
+                  fill="#8b5cf6"
+                />
+                <rect
+                  x="228"
+                  y="85"
+                  width="11"
+                  height="50"
+                  rx="2"
+                  fill="#ec4899"
+                />
+                <rect
+                  x="244"
+                  y="95"
+                  width="11"
+                  height="40"
+                  rx="2"
+                  fill="#3b82f6"
+                />
+                <rect
+                  x="260"
+                  y="75"
+                  width="11"
+                  height="60"
+                  rx="2"
+                  fill="#10b981"
+                />
+              </g>
+
+              <!-- Floating Pen Icon Badge (Line Pen from Image 21f284 middle) -->
+              <g transform="translate(38, 75)">
+                <rect
+                  width="44"
+                  height="44"
+                  rx="10"
+                  fill="#6366f1"
+                  filter="drop-shadow(0px 6px 12px rgba(0,0,0,0.4))"
+                />
+                <path
+                  d="M26.5 14.5 C27.3 13.7 28.6 13.7 29.4 14.5 C30.2 15.3 30.2 16.6 29.4 17.4 L18.5 28.3 L14 29.5 L15.2 25 L26.5 14.5 Z"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+                <line
+                  x1="28"
+                  y1="29.5"
+                  x2="31"
+                  y2="29.5"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </g>
+
+              <!-- Floating Style 'Aa' Badge -->
+              <g transform="translate(315, 55)">
+                <rect
+                  width="40"
+                  height="40"
+                  rx="10"
+                  fill="#ec4899"
+                  filter="drop-shadow(0px 6px 12px rgba(0,0,0,0.35))"
+                />
+                <text
+                  x="20"
+                  y="26"
+                  font-family="sans-serif"
+                  font-weight="bold"
+                  font-size="15"
+                  fill="white"
+                  text-anchor="middle"
+                >
+                  Aa
+                </text>
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Technical Writing Style Guide</h3>
+            <p class="project-desc">
+              Editorial standards covering voice, procedures, accessibility,
+              terminology and documentation quality.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Editorial</span>
+              <span class="project-tag">Style Guide</span>
+              <span class="project-tag">Docs-as-Code</span>
+            </div>
+            <a href="/portfolio/style-guide/" class="project-link"
+              >View Project →</a
+            >
+          </div>
+        </div>
+
+        <!-- Project Card 3: API Documentation Writing Portfolio (SVG Vector Header) -->
+        <div class="project-card reveal">
+          <div class="project-header">
+            <svg
+              class="project-svg"
+              viewBox="0 0 400 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1b3baa" />
+                  <stop offset="50%" stop-color="#2563eb" />
+                  <stop offset="100%" stop-color="#3b82f6" />
+                </linearGradient>
+                <pattern
+                  id="grid3"
+                  width="20"
+                  height="20"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M 20 0 L 0 0 0 20"
+                    fill="none"
+                    stroke="#ffffff"
+                    stroke-width="0.5"
+                    stroke-opacity="0.12"
+                  />
+                </pattern>
+              </defs>
+
+              <!-- Royal Blue Grid Background (Inspired by Image 21f284 right) -->
+              <rect width="400" height="200" fill="url(#bg3)" />
+              <rect width="400" height="200" fill="url(#grid3)" />
+
+              <!-- Vector Document Sheet (Inspired by Image 21eb02) -->
+              <g transform="translate(10, 5)">
+                <g filter="drop-shadow(0px 10px 20px rgba(0,0,0,0.25))">
+                  <rect
+                    x="105"
+                    y="22"
+                    width="180"
+                    height="150"
+                    rx="10"
+                    fill="#ffffff"
+                  />
+                  <!-- Corner fold -->
+                  <path d="M255 22 L285 52 L255 52 Z" fill="#cbd5e1" />
+
+                  <!-- Document Header Bar -->
+                  <rect
+                    x="125"
+                    y="42"
+                    width="80"
+                    height="10"
+                    rx="3"
+                    fill="#1b3baa"
+                  />
+                  <rect
+                    x="125"
+                    y="62"
+                    width="140"
+                    height="6"
+                    rx="2"
+                    fill="#94a3b8"
+                  />
+                  <rect
+                    x="125"
+                    y="74"
+                    width="120"
+                    height="6"
+                    rx="2"
+                    fill="#cbd5e1"
+                  />
+                  <rect
+                    x="125"
+                    y="86"
+                    width="130"
+                    height="6"
+                    rx="2"
+                    fill="#cbd5e1"
+                  />
+
+                  <!-- Approved Proposal Badge Inside Doc -->
+                  <rect
+                    x="125"
+                    y="104"
+                    width="140"
+                    height="48"
+                    rx="6"
+                    fill="#f8fafc"
+                    stroke="#e2e8f0"
+                    stroke-width="1"
+                  />
+                  <circle
+                    cx="150"
+                    cy="128"
+                    r="13"
+                    fill="#3b82f6"
+                    fill-opacity="0.15"
+                  />
+                  <path
+                    d="M145 128 L149 132 L156 124"
+                    stroke="#2563eb"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <rect
+                    x="172"
+                    y="119"
+                    width="70"
+                    height="6"
+                    rx="2"
+                    fill="#1e293b"
+                  />
+                  <rect
+                    x="172"
+                    y="131"
+                    width="50"
+                    height="5"
+                    rx="2"
+                    fill="#64748b"
+                  />
+                </g>
+              </g>
+
+              <!-- Floating Document Badge Left (Document Line Icon from Image 21f284 right) -->
+              <g transform="translate(42, 65)">
+                <rect
+                  width="44"
+                  height="44"
+                  rx="10"
+                  fill="#ffffff"
+                  filter="drop-shadow(0px 6px 14px rgba(0,0,0,0.2))"
+                />
+                <path
+                  d="M17 14 H25 L29 18 V30 C29 31.1 28.1 32 27 32 H17 C15.9 32 15 31.1 15 30 V16 C15 14.9 15.9 14 17 14 Z"
+                  stroke="#1b3baa"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+                <path
+                  d="M24 14 V19 H29"
+                  stroke="#1b3baa"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+                <line
+                  x1="19"
+                  y1="23"
+                  x2="25"
+                  y2="23"
+                  stroke="#1b3baa"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="19"
+                  y1="27"
+                  x2="23"
+                  y2="27"
+                  stroke="#1b3baa"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </g>
+
+              <!-- Floating Check Shield Badge Right -->
+              <g transform="translate(315, 88)">
+                <rect
+                  width="40"
+                  height="40"
+                  rx="10"
+                  fill="#10b981"
+                  filter="drop-shadow(0px 6px 12px rgba(0,0,0,0.25))"
+                />
+                <path
+                  d="M14 20 L18 24 L26 16"
+                  stroke="white"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">API Documentation Writing Portfolio</h3>
+            <p class="project-desc">
+              Complete OpenAPI 3.0 spec and developer docs for an undocumented open-source IoT firmware API. Reduces time-to-first-call from source-code reading to under 2 minutes.
+
+              OpenAPI 3.0YAMLIoT
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Proposal</span>
+              <span class="project-tag">RFP</span>
+              <span class="project-tag">Business Writing</span>
+            </div>
+            <!-- <a href="#" class="project-link">Coming Soon →</a> -->
+             [View Project →](portfolio/ota-server-sample/index.md)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Banner -->
+    <section class="tech-banner" id="tools">
+      <div class="tech-label">Technologies & Tools I craft with</div>
+      <div class="marquee-track" id="marquee">
+        <!-- First set -->
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+            />
+          </svg>
+          GitHub
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M3 3h18v18H3V3zm16 16V5H5v14h14zM7 7h4v4H7V7zm0 6h4v4H7v-4zm6-6h4v4h-4V7zm0 6h4v4h-4v-4z"
+            />
+          </svg>
+          HTML
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+          MK Docs
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+            />
+          </svg>
+          RoboHelp
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+            />
+          </svg>
+          MadCap Flare
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          SharePoint
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M3 3h18v18H3V3zm16 16V5H5v14h14zM7 7h4v4H7V7zm0 6h4v4H7v-4zm6-6h4v4h-4V7zm0 6h4v4h-4v-4z"
+            />
+          </svg>
+          Markdown
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+            />
+          </svg>
+          MS Office
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+            />
+          </svg>
+          Jira
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"
+            />
+          </svg>
+          Confluence
+        </div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+            />
+          </svg>
+          GitHub
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M3 3h18v18H3V3zm16 16V5H5v14h14zM7 7h4v4H7V7zm0 6h4v4H7v-4zm6-6h4v4h-4V7zm0 6h4v4h-4v-4z"
+            />
+          </svg>
+          HTML
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+          MK Docs
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+            />
+          </svg>
+          RoboHelp
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+            />
+          </svg>
+          MadCap Flare
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          SharePoint
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M3 3h18v18H3V3zm16 16V5H5v14h14zM7 7h4v4H7V7zm0 6h4v4H7v-4zm6-6h4v4h-4V7zm0 6h4v4h-4v-4z"
+            />
+          </svg>
+          Markdown
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+            />
+          </svg>
+          MS Office
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+            />
+          </svg>
+          Jira
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"
+            />
+          </svg>
+          Confluence
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+      <div class="cta-container">
+        <div class="cta-content">
+          <div class="cta-label">Let's Work Together</div>
+          <h2 class="cta-title">Looking for a Senior Technical Writer?</h2>
+          <p class="cta-desc">
+            I'm available for full-time opportunities and consulting engagements
+            involving technical documentation and UX writing.
+          </p>
+        </div>
+        <div class="cta-buttons">
+          <!-- <a href="assets/resume.pdf" class="btn btn-white">Download Resume</a> -->
+          <a
+            href="assets/resume.pdf"
+            class="btn btn-white"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Download resume</a
+          >
+          <a href="mailto:arvind.modgal@outlook.com" class="btn btn-outline"
+            >Contact Me</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <span class="footer-name">Arvind Modgal</span>
+          <span class="footer-title"
+            >Senior Technical Writer • UX Writer • Proposal Writer</span
+          >
+        </div>
+        <div class="footer-socials">
+          <a
+            href="mailto:arvind.modgal@outlook.com"
+            class="social-link"
+            aria-label="Email"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+
+          <a
+            href="http://www.linkedin.com/in/arvind-modgal-3705441ba"
+            class="social-link"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+          </a>
+          <a
+            href="assets/resume.pdf"
+            class="social-link"
+            aria-label="PDF Resume"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              ></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <path d="M9 15v-4h6v4"></path>
+              <path d="M12 15v4"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Navbar scroll effect
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Scroll reveal animation
+      const revealElements = document.querySelectorAll(".reveal");
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        },
+      );
+
+      revealElements.forEach((el) => revealObserver.observe(el));
+
+      // Stagger animation for cards
+      const cards = document.querySelectorAll(".service-card, .project-card");
+      cards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.08}s`;
+      });
+    </script>
+  </body>
+</html>

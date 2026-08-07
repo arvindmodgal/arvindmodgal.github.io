@@ -1,0 +1,431 @@
+/* =========================================================
+   THE MODGAL CHRONICLE — vintage newspaper resume styling
+   Drop into: docs/assets/css/newspaper.css
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,400&display=swap");
+
+/* Widen the MkDocs Material reading column so the newspaper has room to breathe.
+   This is scoped to the theme's own grid container, so the left nav sidebar and
+   right table-of-contents keep working normally — only the center column widens.
+   This affects every page on the site, not just this one; adjust the value or
+   remove this rule if you'd rather keep the default column width elsewhere. */
+.md-grid {
+  max-width: 90rem;
+}
+
+/* Masthead font options — swap the value of --font-mast to try a different look:
+   'Pirata One'        → Gothic/blackletter feel, clean letterforms, easy to read (current default)
+   'IM Fell English SC' → antique small-caps, closer to a real 18th-century newspaper masthead
+   'Cinzel'             → engraved Roman capitals, very formal broadsheet look
+   'UnifrakturMaguntia'  → true Fraktur blackletter (ornate, hardest to read at a glance) */
+.chronicle {
+  --paper: #efe6cf;
+  --paper-dark: #e4d8ba;
+  --ink: #2a2420;
+  --ink-soft: #4a4038;
+  --rule: #2a2420;
+  --accent: #7a2e2e;
+  --font-mast: "Pirata One", "Playfair Display", serif;
+  font-family: "Old Standard TT", Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  width: 100%;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 2.75rem 3.5rem 3.5rem;
+  position: relative;
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(
+      ellipse at 8% 12%,
+      rgba(120, 90, 50, 0.16) 0%,
+      rgba(120, 90, 50, 0) 28%
+    ),
+    radial-gradient(
+      ellipse at 92% 88%,
+      rgba(120, 90, 50, 0.14) 0%,
+      rgba(120, 90, 50, 0) 30%
+    ),
+    radial-gradient(
+      ellipse at 85% 15%,
+      rgba(120, 90, 50, 0.1) 0%,
+      rgba(120, 90, 50, 0) 22%
+    ),
+    radial-gradient(
+      ellipse at 12% 90%,
+      rgba(120, 90, 50, 0.1) 0%,
+      rgba(120, 90, 50, 0) 24%
+    ),
+    linear-gradient(var(--paper), var(--paper));
+  box-shadow:
+    0 0 0 1px rgba(42, 36, 32, 0.15),
+    0 18px 40px rgba(0, 0, 0, 0.35);
+  line-height: 1.55;
+}
+
+/* subtle paper grain, tasteful not distressed */
+.chronicle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.035 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+.chronicle * {
+  box-sizing: border-box;
+}
+
+.chronicle a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+/* ---------- Masthead ---------- */
+.chronicle .masthead {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.chronicle .masthead .kicker {
+  font-family: "Old Standard TT", serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.35rem;
+}
+
+.chronicle .masthead h1 {
+  font-family: var(--font-mast);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 6.5vw, 5.2rem);
+  line-height: 1;
+  margin: 0.1rem 0 0.4rem;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.chronicle .masthead .subhead {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.6rem;
+}
+
+.chronicle .rule-thick {
+  border: none;
+  border-top: 4px double var(--rule);
+  margin: 0.6rem 0 0.3rem;
+}
+
+.chronicle .rule-thin {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0.3rem 0;
+}
+
+.chronicle .dateline {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 0.15rem 0.1rem 0.35rem;
+}
+
+/* ---------- Contact strip ---------- */
+.chronicle .contact-strip {
+  text-align: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  padding: 0.5rem 0;
+  color: var(--ink);
+}
+
+.chronicle .contact-strip .label {
+  font-weight: 700;
+  font-variant: small-caps;
+  color: var(--accent);
+}
+
+.chronicle .contact-strip span.sep {
+  margin: 0 0.6rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Lead section: single column, photo inset within the text ---------- */
+.chronicle .lead-section {
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.chronicle .lead-headline {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 2.3rem;
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin: 0 0 0.9rem;
+}
+
+.chronicle .lead-body::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.chronicle .lead-text {
+  font-size: 0.98rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.chronicle .drop-cap::first-letter {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  float: left;
+  font-size: 4.4rem;
+  line-height: 0.8;
+  padding: 0.06em 0.08em 0 0;
+  color: var(--ink);
+}
+
+.chronicle .photo-box {
+  float: right;
+  width: 260px;
+  margin: 0 0 0.75rem 1.75rem;
+  border: 1px solid var(--ink);
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.chronicle .photo-box img {
+  width: 100%;
+  display: block;
+  filter: sepia(0.35) contrast(1.05);
+}
+
+.chronicle .photo-caption {
+  font-size: 0.72rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--ink-soft);
+  margin-top: 0.4rem;
+  line-height: 1.3;
+}
+
+/* ---------- Sidebar box (Core Skills) ---------- */
+.chronicle .infobox {
+  border: 2px solid var(--ink);
+  padding: 0.9rem 1.2rem 1.1rem;
+  margin: 1.2rem auto 0;
+  max-width: 760px;
+  background: rgba(255, 255, 255, 0.12);
+  position: relative;
+}
+
+.chronicle .infobox::before,
+.chronicle .infobox::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  border-top: 1px dashed var(--ink-soft);
+}
+
+.chronicle .infobox::before {
+  top: 5px;
+}
+.chronicle .infobox::after {
+  bottom: 5px;
+}
+
+.chronicle .infobox h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 0.95rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0.4rem 0 0.7rem;
+}
+
+.chronicle .infobox dl {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.chronicle .infobox dt {
+  font-weight: 700;
+  font-variant: small-caps;
+  margin-top: 0.55rem;
+  color: var(--accent);
+}
+
+.chronicle .infobox dd {
+  margin: 0.1rem 0 0;
+  line-height: 1.4;
+}
+
+/* ---------- Section headline ---------- */
+.chronicle .section-headline {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 1.9rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2.2rem 0 0.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.chronicle .section-sub {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.6rem;
+}
+
+/* ---------- Career section: single flowing column ---------- */
+.chronicle .newsflow {
+  font-size: 0.94rem;
+  text-align: justify;
+  hyphens: auto;
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.chronicle .job {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid rgba(42, 36, 32, 0.3);
+}
+
+.chronicle .job:last-child {
+  border-bottom: none;
+}
+
+.chronicle .job h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 0 0 0.15rem;
+  line-height: 1.25;
+}
+
+.chronicle .job .meta {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.chronicle .job p.note {
+  font-size: 0.87rem;
+  font-style: italic;
+  margin: 0.15rem 0 0.5rem;
+}
+
+.chronicle .job ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.chronicle .job li {
+  margin-bottom: 0.4rem;
+}
+
+.chronicle .job li::marker {
+  color: var(--accent);
+}
+
+/* ---------- Footer notices (Education / Additional) ---------- */
+.chronicle .notices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.6rem;
+  position: relative;
+  z-index: 1;
+}
+
+.chronicle .notice-box {
+  border: 1px solid var(--ink);
+  padding: 0.8rem 1rem;
+  font-size: 0.82rem;
+}
+
+.chronicle .notice-box h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin: 0 0 0.5rem;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 0.3rem;
+}
+
+.chronicle .notice-box ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.chronicle .notice-box li {
+  margin-bottom: 0.3rem;
+}
+
+.chronicle .colophon {
+  text-align: center;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 1.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 800px) {
+  .chronicle {
+    padding: 1.6rem 1.2rem 2.2rem;
+  }
+  .chronicle .lead-headline {
+    font-size: 1.5rem;
+  }
+  .chronicle .photo-box {
+    float: none;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 1rem;
+  }
+  .chronicle .notices {
+    grid-template-columns: 1fr;
+  }
+  .chronicle .dateline {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.2rem;
+  }
+}
+
+/* Print-friendly */
+@media print {
+  .chronicle {
+    box-shadow: none;
+    margin: 0;
+  }
+}
